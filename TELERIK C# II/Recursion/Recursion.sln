@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.RecursionFactorial", "Recursion\01.RecursionFactorial.csproj", "{9A5018CA-407E-47C6-B2BC-169380D5DB52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.NvlojeniCikula", "NvlojeniCikula\02.NvlojeniCikula.csproj", "{68ACC444-C61B-43FA-9ECD-B85E784E5D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.JaggedArrays", "JaggedArrays\03.JaggedArrays.csproj", "{505E2473-2041-47CF-9277-6A20140BBB44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A5018CA-407E-47C6-B2BC-169380D5DB52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A5018CA-407E-47C6-B2BC-169380D5DB52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A5018CA-407E-47C6-B2BC-169380D5DB52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A5018CA-407E-47C6-B2BC-169380D5DB52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68ACC444-C61B-43FA-9ECD-B85E784E5D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68ACC444-C61B-43FA-9ECD-B85E784E5D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68ACC444-C61B-43FA-9ECD-B85E784E5D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68ACC444-C61B-43FA-9ECD-B85E784E5D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{505E2473-2041-47CF-9277-6A20140BBB44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{505E2473-2041-47CF-9277-6A20140BBB44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{505E2473-2041-47CF-9277-6A20140BBB44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{505E2473-2041-47CF-9277-6A20140BBB44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
