@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Albums>
+		<Album>
+				<Name>Hitovete0</Name>
+				<Author>Lili ivanova0</Author>
+		</Album>
+		<Album>
+				<Name>Hitovete1</Name>
+				<Author>Lili ivanova1</Author>
+		</Album>
+		<Album>
+				<Name>Hitovete2</Name>
+				<Author>Lili ivanova2</Author>
+		</Album>
+		<Album>
+				<Name>Hitovete3</Name>
+				<Author>Lili ivanova3</Author>
+		</Album>
+		<Album>
+				<Name>Hitovete4</Name>
+				<Author>Lili ivanova4</Author>
+		</Album>
+</Albums>
