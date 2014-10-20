@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <button id="success">Success</button>
+    <button id="error">Error</button>
+    <div id="message-box"></div>
+    <script>
+        (function ($) {
+            $.fn.messageBox = function () {
+                var $this = $(this);
+
+                return {
+                    success: function (message) {
+                        $('#message-box')
+                            .text(message)
+                            .css('color', 'green')
+                            .css('background-color', 'lightgreen')
+                            .fadeIn(1000)
+                            .delay(3000)
+                            .fadeOut(1000);
+                        return $this;
+                    },
+                    error: function (message) {
+                        $('#message-box')
+                            .text(message)
+                            .css('color', 'red')
+                            .css('background-color', 'pink')
+                            .fadeIn(1000)
+                            .delay(3000)
+                            .fadeOut(1000);
+                        return $this;
+                    }
+                };
+            };
+        }(jQuery));
+
+        var msgBox = $('#message-box').messageBox();
+        $('#success').click(function () { msgBox.success('Success message'); });
+        $('#error').click(function () { msgBox.error('Error message'); });
+    </script>
+</body>
+</html>

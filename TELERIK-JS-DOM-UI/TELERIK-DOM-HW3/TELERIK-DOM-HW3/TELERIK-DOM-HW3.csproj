@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion></ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3D877265-7993-48FE-B8D4-7C94D3BEDBF0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TELERIK_DOM_HW3</RootNamespace>
+    <AssemblyName>TELERIK-DOM-HW3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\KineticJS-master\KineticJS-master\doc-includes\ContainerParams.txt" />
+    <Content Include="app\KineticJS-master\KineticJS-master\doc-includes\NodeParams.txt" />
+    <Content Include="app\KineticJS-master\KineticJS-master\doc-includes\ShapeParams.txt" />
+    <Content Include="app\KineticJS-master\KineticJS-master\Gruntfile.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\kinetic.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\kinetic.min.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\nodejs-demo.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Animation.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\BaseLayer.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Canvas.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Container.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Context.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\DragAndDrop.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Factory.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\FastLayer.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Blur.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Brighten.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Emboss.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Enhance.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Grayscale.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\HSL.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\HSV.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Invert.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Kaleidoscope.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Mask.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Noise.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Pixelate.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Posterize.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\RGB.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Sepia.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Solarize.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\filters\Threshold.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Global.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Group.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Layer.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Node.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\plugins\Label.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\plugins\Path.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\plugins\RegularPolygon.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\plugins\Star.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\plugins\TextPath.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Shape.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Arc.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Circle.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Ellipse.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Image.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Line.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Rect.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Ring.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Sprite.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Text.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\shapes\Wedge.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Stage.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Tween.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\src\Util.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\bamoon.jpg" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\cropped-darth.jpg" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\cropped-darth.png" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\darth-vader.jpg" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\Ghostscript_Tiger.svg" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\lion.png" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\scorpion-sprite.png" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\tiger.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\assets\worldMap.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\functional\DragAndDropEvents-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\functional\MouseEvents-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\functional\TouchEvents-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\lib\stats.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\manual\manual-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\memLeakTest.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\memory\build-destroy-star.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\memory\build-destroy-text.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\node-runner.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\performance\common\random-squares.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\performance\random-squares-dev.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\performance\random-squares-v5.0.1.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\performance\rotate-cached-star.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\performance\rotate-star.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\runner.html" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\runner.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\setStats.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Animation-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\BaseLayer-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Canvas-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Collection-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Container-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\DragAndDrop-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\FastLayer-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Blur-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Brighten-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Emboss-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Enhance-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Grayscale-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\HSL-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\HSV-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Invert-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Kaleidoscope-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Mask-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Noise-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Pixelate-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Posterize-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\RGB-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Ripple-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Sepia-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Solarize-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\filters\Threshold-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Global-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Group-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Layer-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Node-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\plugins\Label-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\plugins\Path-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\plugins\RegularPolygon-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\plugins\Star-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\plugins\TextPath-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Shape-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Arc-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Blob-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Circle-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Ellipse-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Image-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Line-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Polygon-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Rect-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Ring-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Spline-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Sprite-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Text-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\shapes\Wedge-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Stage-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Tween-test.js" />
+    <Content Include="app\KineticJS-master\KineticJS-master\test\unit\Util-test.js" />
+    <Content Include="KineticTest.html" />
+    <Content Include="scripts\Human.js" />
+    <Content Include="scripts\Input.js" />
+    <Content Include="scripts\KineticJSDrawing.js" />
+    <Content Include="Task1.html" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\KineticJS-master\KineticJS-master\.gitignore" />
+    <Content Include="app\KineticJS-master\KineticJS-master\.jshintrc" />
+    <Content Include="app\KineticJS-master\KineticJS-master\.npmignore" />
+    <Content Include="app\KineticJS-master\KineticJS-master\.travis.yml" />
+    <Content Include="app\KineticJS-master\KineticJS-master\bower-template.json" />
+    <Content Include="app\KineticJS-master\KineticJS-master\bower.json" />
+    <Content Include="app\KineticJS-master\KineticJS-master\package.json" />
+    <Content Include="app\KineticJS-master\KineticJS-master\presentation-schedule.md" />
+    <Content Include="app\KineticJS-master\KineticJS-master\README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:64693/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl></CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

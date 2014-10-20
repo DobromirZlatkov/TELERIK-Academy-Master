@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <label for="set-bg-color">Chose color for background</label>
+    <input id="set-bg-color" type="color" onchange="setBackGroundColor(this)"/>
+    <script>
+        function setBackGroundColor(input) {
+            var backgroundElement = document.body;
+            backgroundElement.style.background = input.value;
+        }
+    </script>
+</body>
+</html>

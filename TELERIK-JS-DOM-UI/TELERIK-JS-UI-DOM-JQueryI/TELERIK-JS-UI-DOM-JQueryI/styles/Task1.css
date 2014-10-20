@@ -1,0 +1,29 @@
+﻿body {
+    background-color:gray;
+}
+.wrapper{
+    margin:30px;
+    width:800px;
+    height:400px;
+    border:3px inset black;
+}
+.content{
+    background-color:red;
+    width:700px;
+    height:400px;
+    position:absolute;
+    margin-left:50px;
+}
+
+button {
+   margin-top:180px;
+   font-size:30px;
+   width:60px;
+}
+
+.left-slide-button {
+    float:left;
+}
+.rigth-slide-button{
+    float:right;
+}

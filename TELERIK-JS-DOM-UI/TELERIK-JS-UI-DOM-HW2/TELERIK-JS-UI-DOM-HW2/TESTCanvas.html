@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #the-canvas {
+            border: 3px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <button onclick="invertCOlors()">invert</button>
+    <button onclick="darkenCOlor()">invert</button>
+    <canvas id="the-canvas" width="500" height="300"/>
+    <script>
+        var canvas = document.getElementById('the-canvas'),
+            ctx = canvas.getContext('2d');
+        //rectangles
+
+        //ctx.fillStyle = 'purple';
+        //ctx.strokeStyle = 'yellow';
+
+        //ctx.fillRect(10, 10, 57, 97);   
+        //ctx.strokeRect(10, 10, 57, 97);
+
+        //ctx.fillRect(150, 20, 40, 40);
+        //ctx.strokeRect(150, 20, 40, 40);
+        
+        //ctx.fillStyle = 'purple';
+        //ctx.fillRect(10, 10, 57, 87);
+
+        //ctx.fillStyle = 'rgba(0,255,0,0.5)';
+        //ctx.fillRect(50, 20, 140, 140);
+
+        //lines
+
+        //ctx.fillStyle = 'yellowgreen';
+        //ctx.beginPath();
+
+        //ctx.moveTo(50, 50);
+        //ctx.lineTo(130, 150);
+        //ctx.lineTo(70, 150);
+        //ctx.lineTo(250, 50);
+        //ctx.closePath();
+
+        //ctx.fill();
+        //ctx.stroke();
+
+        //ctx.fillStyle = 'yellowgreen';
+        //ctx.beginPath();
+        
+        //ctx.moveTo(50, 50);
+        //ctx.rect(100, 150, 50, 50);
+
+        //ctx.rect(200, 250, 50, 50);
+
+        //ctx.fill();
+        //ctx.stroke();
+
+        //elipses
+        //ctx.fillStyle = 'yellowgreen';
+        //ctx.beginPath();
+        ////ctx.moveTo(50, 50);
+
+        //var cx = canvas.width / 2;
+        //var cy = canvas.height / 2;
+        //var r = 30;
+        
+
+        //ctx.arc(50, 50, r, 0, 2 * Math.PI);
+        //ctx.fill();
+        //ctx.stroke();
+
+
+        //ctx.beginPath();
+        //ctx.arc(150, 50, r, 0, 2 * Math.PI);
+
+        //ctx.fill();
+        //ctx.stroke();
+
+        //half elipse
+        //ctx.fillStyle = 'yellowgreen';
+        //ctx.beginPath();
+        //ctx.lineWidth = '5';
+        //ctx.arc(150, 150, 50, 170 * Math.PI / 180, 240 * Math.PI / 180, true);
+        
+        //ctx.lineTo(150, 150);
+        //ctx.closePath();
+        //ctx.fillStyle = "yellow";
+        //ctx.fill();
+        //ctx.stroke();
+
+        //krivi na bezie
+
+        //ctx.fillStyle = "yellow";
+        //ctx.beginPath();
+        
+        //ctx.moveTo(50, 50);
+        //ctx.quadraticCurveTo(250, 150, 150, 150);
+
+        //ctx.moveTo(50, 50);
+        //ctx.lineTo(150, 150,250, 150);
+
+        //ctx.stroke();
+
+        //ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        ////animation
+        //ctx.beginPath();
+        //var sx = 50;
+        //var sy = 50;
+        //var ex = 250;
+        //var ey = 50;
+        //var cx = 50;
+        //var cy = 300;
+        //var update = 10;
+        //function animationFrame() {
+        //    ctx.clearRect(0, 0, canvas.width, canvas.height);
+        //    ctx.beginPath();
+        //    ctx.moveTo(sx, sy);
+        //    ctx.lineTo(ex, ey);
+        //    ctx.moveTo(sx, sy);
+
+        //    ctx.quadraticCurveTo(cx, cy, ex, ey);
+        //    if (cx > ex) {
+        //        update -= 10;
+        //    }
+        //    if (cx < sx) {
+        //        update += 10;
+        //    }
+        //    cx += update;
+        //    ctx.stroke();
+        //    requestAnimationFrame(animationFrame);
+        //}
+        //animationFrame();
+
+        ////fill text
+        //var text = "Pesho";
+        //ctx.font = '38px Arial';
+        ////ctx.strokeStyle = "yellow";
+        //ctx.strokeText(text, 50, 50);
+
+        //ctx.moveTo(50, 60);
+        //var textWidth = ctx.measureText(text).width;
+        //ctx.lineTo(50 + textWidth, 60);
+        //ctx.stroke();
+
+        //transformations
+        //ctx.fillStyle = "yellow";
+        //ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        //ctx.rotate(15 * Math.PI / 180);
+        //ctx.fillStyle = "black";
+        //ctx.fillRect(50, 50, 100, 100);
+
+        ////scale
+        //ctx.fillRect(50, 50, 50, 50);
+        //ctx.scale(1, 1.7);
+        //ctx.fillRect(50, 60, 50, 50);
+        
+
+       // elipse
+        //scaled
+        //ctx.save();
+        //ctx.beginPath();
+        //ctx.scale(1, 0.5);
+        //ctx.fillStyle = 'green';
+        //ctx.arc(100, 100, 75, 0, 2 * Math.PI);
+        //ctx.stroke();
+
+        
+        //ctx.restore();
+        //ctx.beginPath();
+        //ctx.arc(80, 50, 30, 0, 2 * Math.PI);
+        //ctx.stroke();
+
+        //izobrajeniq
+        //var img = new Image();
+
+        //img.onload = function () {
+        //    ctx.drawImage(img,0,0, canvas.width, canvas.height
+        //        );
+        //   // document.body.appendChild(img);
+        //};
+        //function invertCOlors() {
+        //    var imageDate = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        //    for (var i = 0; i < imageDate.data.length ; i += 4) {
+        //        //reverse colors;
+        //        //imageDate.data[i + 0] = 255 - imageDate.data[i + 0];
+        //        //imageDate.data[i + 1] = 255 - imageDate.data[i + 1];
+        //        //imageDate.data[i + 2] = 255 - imageDate.data[i + 2];
+        //        //whiten colors
+        //        imageDate.data[i + 0] += 10;
+        //        imageDate.data[i + 1] += 10;
+        //        imageDate.data[i + 2] += 10;
+               
+        //    }
+        //    ctx.putImageData(imageDate, 0, 0);
+        //}
+        //function darkenCOlor() {
+        //    var imageDate = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        //    for (var i = 0; i < imageDate.data.length ; i += 4) {
+        //        //reverse colors;
+        //        //imageDate.data[i + 0] = 255 - imageDate.data[i + 0];
+        //        //imageDate.data[i + 1] = 255 - imageDate.data[i + 1];
+        //        //imageDate.data[i + 2] = 255 - imageDate.data[i + 2];
+        //        //whiten colors
+        //        imageDate.data[i + 0] -= 10;
+        //        imageDate.data[i + 1] -= 10;
+        //        imageDate.data[i + 2] -= 10;
+
+        //    }
+        //    ctx.putImageData(imageDate, 0, 0);
+        //}
+        //img.src = 'img/images.jpg';
+    </script>  
+</body>
+</html>

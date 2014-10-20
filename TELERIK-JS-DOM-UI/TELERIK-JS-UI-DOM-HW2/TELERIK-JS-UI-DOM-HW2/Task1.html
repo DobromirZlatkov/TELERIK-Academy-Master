@@ -1,0 +1,292 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #the-canvas {
+            border: 3px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+    <button id="draw-face" onclick="drawFace()">Click To Draw Face</button>
+    <button id ="draw-bycicle" onclick="drawBycicle()">Click To Draw Bycicle</button>
+    <button id ="draw house" onclick="drawHouse()">Click to Draw HOuse</button>
+     <canvas id="the-canvas" width="500" height="350"></canvas>
+    <script>
+        var canvas = document.getElementById("the-canvas"),
+            ctx = canvas.getContext('2d');
+        var cx = 100,
+            cy = 100,
+            r = 38;
+
+        function drawFace() {
+            
+            function drawCircle(cx, cy, r) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(153,217,234)";
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.arc(cx, cy, r, 0, 360 * Math.PI / 180);
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawCircle(cx, cy, r);
+            ctx.restore();
+            function drawEye(cx, cy, r) {
+                ctx.restore();
+                ctx.save();
+                ctx.beginPath();
+                //ctx.moveTo(50, 50);
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.scale(1, 0.6);
+                ctx.arc(cx, cy, r, 0, 360 * Math.PI / 180);
+                ctx.stroke();
+
+                ctx.restore();
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(63,72,204)";
+                ctx.scale(1, 1);
+                ctx.arc(cx - 2, cy - 62, r / 2 - 1, 0, 360 * Math.PI / 180);
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawEye(75, 155, 7);
+            drawEye(107, 155, 7);
+            ctx.restore();
+            function drawNose(mX, mY) {
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.beginPath();
+
+                ctx.moveTo(mX, mY);
+                ctx.lineTo(mX - 10, mY + 20);
+                ctx.lineTo(mX, mY + 20);
+
+                ctx.stroke();
+            }
+            ctx.save();
+            drawNose(93, 93);
+            ctx.restore();
+            function drawMouth(cx, cy, r) {
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.rotate(10 * Math.PI / 180);
+                ctx.scale(1, 0.3);
+                ctx.arc(cx, cy, r, 0, 360 * Math.PI / 180);
+                ctx.lineWidth = "3";
+                ctx.stroke();
+            }
+            ctx.save();
+            drawMouth(110, 350, 15);
+            ctx.restore();
+            function drawElipse(cx, cy, r, scaleValue) {
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(0,0,0)";
+                ctx.fillStyle = "rgb(0,162,232)";
+                ctx.scale(1, scaleValue);
+                ctx.arc(cx, cy, r, 0, 360 * Math.PI / 180);
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawElipse(100, 350, 40, 0.2);
+            ctx.restore();
+
+            function drawHat(x, y) {
+                ctx.beginPath();
+                ctx.strokeStyle = 'black';
+                ctx.fillStyle = "rgb(0,162,232)";
+                ctx.moveTo(x, y);
+                ctx.lineTo(x, y + 50);
+                ctx.quadraticCurveTo(x + 20, y + 60, x + 40, y + 50);
+                ctx.lineTo(x + 40, y);
+                ctx.fill();
+                ctx.closePath();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawHat(80, 17);
+            ctx.restore();
+            ctx.save();
+            drawElipse(100, 50, 20, 0.3);
+            ctx.restore();
+        }
+        
+        function drawBycicle() {
+            function drawCircle(cx, cy, r) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(153,217,234)";
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.arc(cx, cy, r, 0, 360 * Math.PI / 180);
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawCircle(150, 150, 25);
+            drawCircle(275, 150, 25);
+            ctx.restore();
+
+            function drawFrame(sx, sy) {
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.moveTo(sx, sy);
+                ctx.lineTo(205, 150);
+                ctx.lineTo(270, 120);
+                ctx.lineTo(190, 115);
+                ctx.closePath();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawFrame(150, 150);
+            ctx.restore();
+            function drawRule() {
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.moveTo(275, 150);
+                ctx.lineTo(265, 95);
+                ctx.lineTo(280, 75);
+                ctx.moveTo(265, 95);
+                ctx.lineTo(240, 105);
+                ctx.stroke();
+
+            }
+            ctx.save();
+            drawRule();
+            ctx.restore();
+            function drawPedals() {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(153,217,234)";
+                ctx.strokeStyle = "rgb(63,72,204)";
+                ctx.arc(205, 150, 7, 0, 360 * Math.PI / 180);
+                //ctx.fill();
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(200, 145);
+                ctx.lineTo(195, 140);
+                ctx.moveTo(210, 155);
+                ctx.lineTo(215, 160);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(205, 150);
+                ctx.lineTo(183, 100);
+                ctx.stroke();
+
+                ctx.moveTo(170, 100);
+                ctx.lineTo(195, 100);
+
+                ctx.stroke();
+            }
+            ctx.save();
+            drawPedals();
+            ctx.restore();
+        }
+
+        function drawHouse() {
+
+            function drawRoof(mx, my) {
+
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(183,0,60)";
+                ctx.strokeStyle = "black";
+
+                ctx.moveTo(mx, my);
+                ctx.lineTo(mx + 150, my);
+                ctx.lineTo(mx + 75, my - 100);
+                ctx.closePath();
+                ctx.fill();
+                ctx.stroke();
+
+                function drawChimney() {
+                    ctx.beginPath();
+                    ctx.moveTo(mx + 100, my - 30);
+                    ctx.lineTo(mx + 100, my - 80);
+                    ctx.lineTo(mx + 116, my - 80);
+                    ctx.lineTo(mx + 116, my - 30);
+                    ctx.fill();
+                    ctx.stroke();
+                    // ctx.lineWidth = 2;
+                    ctx.scale(1, 0.3);
+                    ctx.arc(mx + 108, my + 80, 8, 0, 360 * Math.PI / 180);
+                    ctx.fill();
+                    ctx.stroke();
+                }
+                drawChimney();
+            }
+            ctx.save();
+            drawRoof(340, 150);
+            ctx.restore();
+
+            function drawBody(mx, my) {
+                ctx.beginPath();
+                ctx.fillStyle = "rgb(183,0,60)";
+                ctx.moveTo(mx, my);
+                ctx.lineTo(mx, my + 110);
+                ctx.lineTo(mx + 150, my + 110);
+                ctx.lineTo(mx + 150, my);
+                ctx.fill();
+                ctx.stroke();
+            }
+            ctx.save();
+            drawBody(340, 150);
+            ctx.restore();
+            function drawWIndow(mx, my) {
+                var width = 55,
+                    heigth = 40;
+
+                ctx.fillStyle = "black";
+
+                ctx.fillRect(mx, my, width, heigth);
+
+
+                ctx.beginPath();
+                ctx.strokeStyle = "rgb(183,0,60)";
+                ctx.moveTo(mx, my + heigth / 2);
+                ctx.lineTo(mx + width, my + heigth / 2);
+
+                ctx.moveTo(mx + width / 2, my);
+                ctx.lineTo(mx + width / 2, my + heigth);
+                ctx.stroke();
+            }
+            ctx.save();
+            drawWIndow(355, 160);
+
+            drawWIndow(425, 160);
+
+            drawWIndow(425, 210);
+            ctx.restore();
+
+            function drawDoor(mx, my) {
+                var doorHeigth = 40,
+                    doorWidth = 40;
+                ctx.beginPath();
+
+                ctx.moveTo(mx, my);
+                ctx.lineTo(mx, my - doorHeigth);
+                ctx.quadraticCurveTo((my + doorWidth) + doorWidth + 35, my - doorHeigth - 20, mx + doorWidth, my - doorHeigth);
+                ctx.lineTo(mx + doorWidth, my);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.moveTo(mx + doorWidth / 2, my);
+                ctx.lineTo(mx + doorWidth / 2, my - doorHeigth - 10);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(mx + 15, my - 20, 2, 0, 360 * Math.PI / 180);
+                ctx.stroke();
+
+                ctx.beginPath();
+                ctx.arc(mx + 25, my - 20, 2, 0, 360 * Math.PI / 180);
+                ctx.stroke();
+
+            }
+
+            drawDoor(355, 260);
+        }
+    </script>
+</body>
+</html>

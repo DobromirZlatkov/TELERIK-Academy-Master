@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        #the-canvas {
+            border: 3px solid black;
+        }
+        
+    </style>
+</head>
+<body>
+      <canvas id="the-canvas" width="500" height="350"></canvas>
+    <script>
+        var canvas = document.getElementById("the-canvas");
+        var ctx = canvas.getContext('2d');
+        var cx = 0,
+            startPos = 150,
+            cy = startPos,
+            direction = "down-rigth",
+            white = true,
+            speed = 3;
+        function goDown() {
+            ctx.beginPath();
+           // ctx.mozDash = [20, 10];
+
+
+            if (white) {
+                ctx.strokeStyle = "red";
+            }
+            else {
+                ctx.strokeStyle = "black";
+            }
+            white = !white;
+        
+            lastDirection = '';
+           // ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.moveTo(cx, cy);
+            if (direction == "down-rigth") {
+                cy += speed;
+                cx += speed;
+                lastDirection = "down-rigth";
+            }
+            else if (direction == "up-rigth") {
+                cy -= speed;
+                cx += speed;
+                lastDirection = "up-rigth";
+            }
+            else if (direction == "up-left") {
+                cy -= speed;
+                cx -= speed;
+                lastDirection = "up-left";
+            }
+            else if (direction == "down-left") {
+                cy += speed;
+                cx -= speed;
+                lastDirection = "down-left";
+            }
+            
+            if (cy >= canvas.height) {
+                if (lastDirection == "down-left") {
+                    direction = "up-left";
+                }
+                else {
+                    direction = "up-rigth";
+                }
+                
+            }
+            else if (cx >= canvas.width) {
+                if (lastDirection == "up-rigth") {
+                    direction = "up-left";
+                }
+                else {
+                    direction = "down-left";
+                }
+                
+            }
+            else if (cy <= 0) {
+                if (lastDirection == "up-left") {
+                    direction = "down-left";
+                }
+                else {
+                    direction = "down-rigth";
+                }
+            }
+            else if (cx <= 0 ) {
+                if (lastDirection == "down-left") {
+                    direction = "down-rigth";
+                }
+                else {
+                    direction = "up-rigth";
+                }
+            }
+            
+            ctx.lineTo(cx, cy);
+            ctx.stroke();
+            
+            requestAnimationFrame(goDown);
+        }
+        
+        goDown();
+        
+        
+        
+    </script>
+</body>
+</html>

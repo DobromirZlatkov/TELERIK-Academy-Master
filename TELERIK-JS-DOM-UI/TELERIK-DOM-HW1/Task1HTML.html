@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <div id="wrapper">
+        <div>
+            aliop
+        </div>
+        <div>
+            aliop
+        </div>
+        <div>
+            aliop
+        </div>
+        <div>
+
+        </div>
+    </div>
+<script>
+    function getElementsByQuerrySelector() {
+        var divs = document.querySelectorAll("div > div");
+        for(var i = 0, len = divs.length;i < len; i+=1){
+            console.log(divs[i]);
+        }
+    }
+    function getElementsByTagName() {
+        var divs = document.getElementsByTagName("div");
+        for(var i = 0, len = divs.length;i < len; i+=1){
+            if (divs[i].parentNode.nodeName == "DIV"){
+                console.log(divs[i]);
+            }
+        }
+    }
+
+    getElementsByQuerrySelector();
+    getElementsByTagName();
+</script>
+</body>
+</html>

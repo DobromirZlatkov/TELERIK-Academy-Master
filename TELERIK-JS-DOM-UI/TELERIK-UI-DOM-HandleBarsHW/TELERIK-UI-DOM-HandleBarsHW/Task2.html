@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <div id="container">Select number from 1 to 5</div>
+
+    <script type ="text/x-handlebars-template" id="post-template">
+        <select>
+            {{#items}}
+                <option id="{{value}}">{{text}}</option>
+            {{/items}}
+        </select>
+    </script>
+
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
+    <script src="scripts/Task2.js"></script>
+</body>
+</html>

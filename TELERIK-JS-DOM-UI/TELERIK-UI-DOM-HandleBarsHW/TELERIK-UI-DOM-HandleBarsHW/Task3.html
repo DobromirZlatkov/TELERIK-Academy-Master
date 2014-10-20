@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <title>Listview</title>
+    <style>
+        #table-students table, #table-students th, #table-students td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div id="book-items-container">
+        <ul id="books-list" data-template="book-item-template"></ul>
+    </div>
+    <div id="table-students">
+        <table>
+            <thead>
+                <tr><th>#</th><th>Name</th><th>Mark</th></tr>
+            </thead>
+            <tbody id="students-table" data-template="students-row-template"></tbody>
+        </table>
+    </div>
+    <script id="book-item-template" type="text/x-handlebars-template">
+        {{#each books}}
+        <li class="book-item">
+            <a href="/#books/{{this.id}}">
+                <strong>{{this.title}}</strong>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script id="students-row-template" type="text/x-handlebars-template">
+        {{#each students}}
+        <tr class="student-row">
+            <td>{{@index}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.mark}}</td>
+        </tr>
+        {{/each}}
+    </script>
+    <script src="scripts/Task3.js"></script>
+</body>
+</html>

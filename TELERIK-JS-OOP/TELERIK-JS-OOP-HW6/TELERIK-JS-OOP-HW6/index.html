@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Snake</title>
+    <script src="bower_components/kineticjs/kinetic.min.js"></script>
+    <script src="scripts/Snake/Class.js"></script>
+    <script src="scripts/Snake/drawer.js"></script>
+    <script src="scripts/Snake/Score.js"></script>
+    <script src="scripts/Snake/Engine.js"></script>
+</head>
+<body>
+    <div id="container">
+        <button id="start">Start Game</button>
+    </div>
+    <script>
+        document.getElementById('start').addEventListener('click', Snake.Engine('container').startGame);
+    </script>
+</body>
+</html>

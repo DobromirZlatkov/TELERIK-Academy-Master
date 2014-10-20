@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function selectDay(number) {
+            if (number > 6) {
+                number %= 7;
+            }
+            switch (number) {
+                case 0: return 'Mon';
+                case 1: return 'Tue';
+                case 2: return 'Wed';
+                case 3: return 'Thur';
+                case 4: return 'Fri';
+                case 5: return 'Sat';
+                case 6: return 'Sun';
+                default: return 'unknown';
+            }
+        }
+
+        for (var i = 0; i < 30; i++) {
+            console.log(selectDay(i));
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="lections-table-container"></div>
+    <script id="lections-table-template" type='text/x-handlebars-template'>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Title</th>
+                <th>Date #1</th>
+                <th>Date #2</th>
+            </tr>
+
+            {{#courses}}
+            <tr class="course-info">
+                <td class="course-id">{{id}}</td>
+                <td class="course-name">{{name}}</td>
+                <td class="course-first-date">{{firstDate}}</td>
+                <td class="course-second-date">{{secondDate}}</td>
+            </tr>
+            {{/courses}}
+        </table>
+    </script>
+
+    <script src="bower_components/handlebars/handlebars.min.js"></script>
+    <script src="scripts/Task1.js"></script>
+</body>
+</html>

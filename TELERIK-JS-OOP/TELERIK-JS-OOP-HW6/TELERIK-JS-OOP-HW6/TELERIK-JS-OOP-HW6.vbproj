@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion></ProductVersion>
+    <SchemaVersion></SchemaVersion>
+    <ProjectGuid>{606909CE-7ED2-4D19-B33B-4F8F665C9C6F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TELERIK_JS_OOP_HW6</RootNamespace>
+    <AssemblyName>TELERIK-JS-OOP-HW6</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TELERIK-JS-OOP-HW6.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>TELERIK-JS-OOP-HW6.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\kineticjs\doc-includes\ContainerParams.txt" />
+    <Content Include="bower_components\kineticjs\doc-includes\NodeParams.txt" />
+    <Content Include="bower_components\kineticjs\doc-includes\ShapeParams.txt" />
+    <Content Include="bower_components\kineticjs\Gruntfile.js" />
+    <Content Include="bower_components\kineticjs\kinetic.js" />
+    <Content Include="bower_components\kineticjs\kinetic.min.js" />
+    <Content Include="bower_components\kineticjs\nodejs-demo.js" />
+    <Content Include="bower_components\kineticjs\server.js" />
+    <Content Include="bower_components\kineticjs\src\Animation.js" />
+    <Content Include="bower_components\kineticjs\src\BaseLayer.js" />
+    <Content Include="bower_components\kineticjs\src\Canvas.js" />
+    <Content Include="bower_components\kineticjs\src\Container.js" />
+    <Content Include="bower_components\kineticjs\src\Context.js" />
+    <Content Include="bower_components\kineticjs\src\DragAndDrop.js" />
+    <Content Include="bower_components\kineticjs\src\Factory.js" />
+    <Content Include="bower_components\kineticjs\src\FastLayer.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Blur.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Brighten.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Emboss.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Enhance.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Grayscale.js" />
+    <Content Include="bower_components\kineticjs\src\filters\HSL.js" />
+    <Content Include="bower_components\kineticjs\src\filters\HSV.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Invert.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Kaleidoscope.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Mask.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Noise.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Pixelate.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Posterize.js" />
+    <Content Include="bower_components\kineticjs\src\filters\RGB.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Sepia.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Solarize.js" />
+    <Content Include="bower_components\kineticjs\src\filters\Threshold.js" />
+    <Content Include="bower_components\kineticjs\src\Global.js" />
+    <Content Include="bower_components\kineticjs\src\Group.js" />
+    <Content Include="bower_components\kineticjs\src\Layer.js" />
+    <Content Include="bower_components\kineticjs\src\Node.js" />
+    <Content Include="bower_components\kineticjs\src\plugins\Label.js" />
+    <Content Include="bower_components\kineticjs\src\plugins\Path.js" />
+    <Content Include="bower_components\kineticjs\src\plugins\RegularPolygon.js" />
+    <Content Include="bower_components\kineticjs\src\plugins\Star.js" />
+    <Content Include="bower_components\kineticjs\src\plugins\TextPath.js" />
+    <Content Include="bower_components\kineticjs\src\Shape.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Arc.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Circle.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Ellipse.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Image.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Line.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Rect.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Ring.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Sprite.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Text.js" />
+    <Content Include="bower_components\kineticjs\src\shapes\Wedge.js" />
+    <Content Include="bower_components\kineticjs\src\Stage.js" />
+    <Content Include="bower_components\kineticjs\src\Tween.js" />
+    <Content Include="bower_components\kineticjs\src\Util.js" />
+    <Content Include="images\apple.png" />
+    <Content Include="images\snake.png" />
+    <Content Include="index.html" />
+    <Content Include="scripts\snake\Class.js" />
+    <Content Include="scripts\snake\drawer.js" />
+    <Content Include="scripts\snake\Engine.js" />
+    <Content Include="scripts\snake\Score.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\kineticjs\.bower.json" />
+    <Content Include="bower_components\kineticjs\bower-template.json" />
+    <Content Include="bower_components\kineticjs\bower.json" />
+    <Content Include="bower_components\kineticjs\package.json" />
+    <Content Include="bower_components\kineticjs\presentation-schedule.md" />
+    <Content Include="bower_components\kineticjs\README.md" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>5319</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5319/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl></CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
