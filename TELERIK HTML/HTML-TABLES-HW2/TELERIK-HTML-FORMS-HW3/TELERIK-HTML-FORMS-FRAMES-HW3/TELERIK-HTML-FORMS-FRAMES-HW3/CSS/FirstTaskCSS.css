@@ -1,0 +1,26 @@
+﻿body form{
+    width:460px;
+    border:2px solid black;
+    border-radius:3px;
+}
+
+body form table {
+border:2px solid yellow;
+}
+
+body form table tfoot {
+background-color:azure;
+}
+
+body form table tfoot tr td p {
+    text-align:center;
+}
+body tbody tr td.label{
+    text-align:right;
+}
+body tbody tr td input.single {
+    width:95%;
+}
+body tbody tr td textarea {
+    width:97%;
+}

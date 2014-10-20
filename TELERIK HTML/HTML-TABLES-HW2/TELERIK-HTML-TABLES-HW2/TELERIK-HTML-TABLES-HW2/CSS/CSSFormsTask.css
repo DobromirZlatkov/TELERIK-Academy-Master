@@ -1,0 +1,11 @@
+﻿
+body div input.picture{
+    width:60px;
+    border-radius:10px;
+    border:2px solid cyan;
+}
+body div {
+    width:400px;
+    border:2px solid black;
+    border-radius:10px;
+}

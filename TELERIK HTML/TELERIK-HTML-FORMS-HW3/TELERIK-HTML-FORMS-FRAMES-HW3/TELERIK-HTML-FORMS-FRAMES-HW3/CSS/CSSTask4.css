@@ -1,0 +1,66 @@
+﻿body table tr td:first-child input{
+    width:40px;
+}
+body table thead tr td button img {
+    width:8px;
+}
+body table tfoot tr td button img {
+    width:10px;
+}
+body table thead tr th {
+    text-align:left;
+    font-weight:normal;
+}
+body table thead {
+    background-color:#D1D1FF;
+    border-radius:10px;
+}
+body table {
+    border:groove;
+    border-radius:5px;
+    font-family:Calibri;
+}
+body table tr td{
+    border:ridge;
+}
+body table thead tr:first-child + tr td {
+    padding-left: 6px;
+    padding-right:6px;
+   background: #f2f6f8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f6f8 16%, #d8e1e7 50%, #e0eff9 79%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(16%,#f2f6f8), color-stop(50%,#d8e1e7), color-stop(79%,#e0eff9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* IE10+ */
+    background: linear-gradient(to bottom, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+}
+body table thead tr:first-child + tr + tr td {
+    height: 33px;
+}
+body table tfoot {
+    background: #f2f6f8; /* Old browsers */
+    background: -moz-linear-gradient(top, #f2f6f8 16%, #d8e1e7 50%, #e0eff9 79%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(16%,#f2f6f8), color-stop(50%,#d8e1e7), color-stop(79%,#e0eff9)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* IE10+ */
+    background: linear-gradient(to bottom, #f2f6f8 16%,#d8e1e7 50%,#e0eff9 79%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9',GradientType=0 ); /* IE6-9 */
+}
+body table thead tr td input {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    width:60%;
+    height:50%;
+}
+body table thead tr td input#specialCheckBox {
+    width:15px;
+    height:15px;
+}
+body table tfoot tr td span {
+    padding-left:15px;    
+}
+body table tfoot tr td span#pagesAndItems {
+    padding-left:244px;    
+}

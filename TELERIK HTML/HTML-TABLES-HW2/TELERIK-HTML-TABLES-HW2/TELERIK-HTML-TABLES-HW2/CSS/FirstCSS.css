@@ -1,0 +1,15 @@
+﻿body {
+}
+html body div table tbody tr td img {
+    width:150px;
+    height:100px;
+    border-radius:10px;
+}
+html body div table tbody tr td {
+    width : 200px;
+    padding-left:15px;
+}
+html body div table {
+    border:2px solid black;
+    border-radius:10px;
+}

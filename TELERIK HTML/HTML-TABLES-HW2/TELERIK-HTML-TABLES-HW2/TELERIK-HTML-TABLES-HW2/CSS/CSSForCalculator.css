@@ -1,0 +1,18 @@
+﻿body table{
+    border:2px solid black;
+    border-radius:3px;
+    
+}
+body table tr td{
+    border:2px solid black;
+    border-radius:3px;    
+}
+body table tr td input{
+    width:30px;  
+}
+body table tr td input.resultBlock{
+    width:132px;  
+}
+body table tr td input.zeroButton{
+    width:67px;  
+}
