@@ -1,0 +1,19 @@
+﻿body {
+}
+
+#wrapper{
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+    text-align:center;
+    background-color:brown;
+}
+#chatbox{
+    border: 2px solid black;
+    overflow-y:scroll;
+    width: 400px;
+    height:300px;
+    margin-left: 35px;
+    text-align:left;
+    background-color:antiquewhite;
+}

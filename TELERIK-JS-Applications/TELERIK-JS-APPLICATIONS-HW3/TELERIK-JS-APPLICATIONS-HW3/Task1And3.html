@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Task 1, Task3</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/q/q.js"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <label for="name">Name:</label>
+        <input id="student-name" type="text" name="name" placeholder="Enter name" />
+        <br />
+        <label for="grade">Grade:</label>       
+        <input id="student-grade" type="text" name="grade" placeholder="Enter grade" />
+        <button id="save-student">Save Student</button>
+ 
+        <br />
+        <label for="student-id">Id to delete:</label>
+        <input id="student-id" type="text" name="student-id" placeholder="Enter id" />    
+        <button id="delete-student">Delete Student</button>
+        
+        <div id="http-response"></div>
+    </div>
+    <script src="bower_components/require/require.js" data-main="scripts/app.js"></script>
+</body>
+</html>

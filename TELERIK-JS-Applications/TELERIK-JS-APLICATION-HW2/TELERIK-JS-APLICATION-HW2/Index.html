@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div{
+            border:1px solid black;
+            display:inline-block;
+        }
+        #wrapper{
+            width:500px;
+            height:500px;
+        }
+        #pairs-container{
+            float:right;
+        }
+    </style>
+</head>
+<body>
+  
+    
+    <div id="wrapper">
+        <input id="number-to-guess" type="text" name="name" placeholder="Enter Number" />
+        <button id="try-guess-number">Guess</button>
+        <button id="clear-local-storage">Clear Storage</button>
+        <div id="player-info-wrapper">
+            <input id="name-input" type="text" name="name" placeholder="Your Name" />
+            <button id="save-name">Save Score</button>
+        </div>
+        <div id="pairs-container">
+
+        </div>
+    </div>
+      <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bullsAndCows.js"></script>
+</body>
+</html>
