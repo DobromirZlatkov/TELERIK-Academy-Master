@@ -1,0 +1,37 @@
+<div class="jumbotron" ng-controller="PlayersController">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="well">
+                <h2>Top 10 results
+                    <button class="btn btn-sm" ng-click="showAndHideAllUsers()">{{allUsersShownText}}</button>
+                </h2>
+                <ul class="list-group" ng-show="allUsersShown">
+
+                    <li ng-repeat="userScore in allUsersScores | filter: search" class="list-group-item">
+                        <p>
+                            <strong>Name: </strong>
+                            <a href="">{{userScore.Username}}</a>
+                        </p>
+
+                        <p>
+                            <strong>Wins: </strong>
+                            {{userScore.Wins}}
+                        </p>
+                        <p>
+                            <strong>Losses: </strong>
+                            {{userScore.Losses}}
+                        </p>
+                        <p>
+                            <strong>Points: </strong>
+                            {{userScore.Points}}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2">
+            Search :
+            <input type="text" ng-model="search"/>
+        </div>
+    </div>
+</div>

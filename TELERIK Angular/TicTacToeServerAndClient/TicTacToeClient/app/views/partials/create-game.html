@@ -1,0 +1,19 @@
+<div ng-controller="CreateGameCtr" class="jumbotron">
+    <div class="row">
+        <div class="col-md-3" ng-show="isAuthenticated">
+            <form class="form-horizontal" name="newGameForm">
+                <fieldset>
+                    <label for="name" class="control-label">Game Name</label>
+
+                       <input id="name" class="form-control" type="text" required="required" placeholder="Name" ng-model="game.name"/>
+
+                </fieldset>
+
+                <div class="pull-right">
+                    <button class="btn btn-default" ng-disabled="newGameForm.$invalid" ng-click="createGame(game.name)">Save</button>
+                    <button class="btn btn-default" ng-click="cancel()">Cancel</button>
+                </div>
+            </form>
+          </div>
+    </div>
+</div>

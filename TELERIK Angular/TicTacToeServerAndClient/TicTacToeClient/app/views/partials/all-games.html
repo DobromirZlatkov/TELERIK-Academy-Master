@@ -1,0 +1,36 @@
+
+<div class="row" ng-controller="ListGamesCtr">
+
+    <div class="col-md-3">
+        <div class="well" >
+            <h2>Available Games  <button class="btn btn-sm" ng-click="showAndHideAvailableGames()">{{availableGameShownText}}</button></h2>
+            <ul class="list-group" ng-show="availableGamesShown">
+
+                <li ng-repeat="game in availableGames | filter: search" class="list-group-item" ng-if="availableGames.length > 0">
+                    <p>
+                        <strong>Name: </strong>
+                        <a href="" >{{game.Name}}</a>
+                    </p>
+                    <p>
+                        <strong>Date Created: </strong>
+                        {{game.DateCreated}}
+                    </p>
+                    <p>
+                        <strong>Creator: </strong>
+                        {{game.Creator}}
+                    </p>
+                    <button class="btn btn-sm" ng-click="joinGame(game.Id)">Join</button>
+                </li>
+                <li class="list-group-item" ng-if="availableGames.length == 0">
+                    There is no available games sorry :(
+                </li>
+            </ul>
+        </div>
+    </div>
+
+     <div class="col-md-2">
+        Search :
+        <input type="text" ng-model="search"/>
+    </div>
+
+</div>
