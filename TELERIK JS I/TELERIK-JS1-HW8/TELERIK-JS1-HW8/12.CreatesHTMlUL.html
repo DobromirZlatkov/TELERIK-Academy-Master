@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>							  
+
+	<script>
+	   
+
+	    var template = "<strong>-{name}-</strong>&nbsp;<span>-{age}-</span>"; 
+	    var people = [														 
+			    { name: "Claus", age: "20" },
+			    { name: "Helena", age: "51" },
+			    { name: "George", age: "32" },
+			    { name: "Peter", age: "13" },
+			    { name: "Clive", age: "24" },
+	    ];
+
+
+	    function genList(template, object) {
+	        var ul = document.createElement('ul');
+	        ul.style.listStyleType = 'none';
+	        var re = new RegExp("-{(\\w+?)}-"); 
+
+	        for (var i = 0; i < object.length; i++) {
+	            var li = document.createElement('li');
+	            var currTemp = template;
+	            var matched = currTemp.match(re);
+
+
+	            while (matched != null) {
+	                var objName = matched[1];
+	                currTemp = currTemp.replace(matched[0], object[i][objName]);
+	                matched = currTemp.match(re);
+	            }
+
+	            li.innerHTML = currTemp; 
+	            ul.appendChild(li);
+	        };
+
+	        document.body.appendChild(ul);
+	    };
+
+	    genList(template, people);
+	</script>
+</body>
+</html>

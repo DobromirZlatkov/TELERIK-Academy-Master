@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function Point(x, y) {
+            this.X = x;
+            this.Y = y;
+            this.toString = function () {
+                return 'point(' + this.X + ',' + this.Y + ')';
+            };
+            this.distanceBetweenPoints = function (p2) {
+                var distance = Math.sqrt(((this.X - p2.X) * (this.X - p2.X)) + ((this.Y - p2.Y) * (this.Y - p2.Y)));
+                return distance;
+            };   
+        }
+        
+        function Line(p1, p2) {
+            this.firstPoint = p1;
+            this.secondPoint = p2;
+            this.getLength = function () {
+                return this.firstPoint.distanceBetweenPoints(secondPoint);
+            };
+            this.toString = function () {
+                return "Line = " + this.firstPoint.toString() + " --- " + this.secondPoint.toString();
+            }
+        }
+
+        function isTrianglePossible(line1, line2, line3) {
+            var firstLineLength = line1.getLength();
+            var secondLineLength = line2.getLength();
+            var thirdLineLength = line3.getLength();
+
+            if (firstLineLength + secondLineLength > thirdLineLength &&
+                firstLineLength + thirdLineLength > secondLineLength &&
+                secondLineLength + thirdLineLength > firstLineLength) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        var firstPoint = new Point(0, 3);
+        var secondPoint = new Point(5, 3);
+        var thirdPoint = new Point(2, 4);
+
+        jsConsole.writeLine('Points ---------------------------')
+        jsConsole.writeLine(firstPoint.toString());
+        jsConsole.writeLine(secondPoint.toString());
+        jsConsole.writeLine(thirdPoint.toString());
+        jsConsole.writeLine();
+
+        var firstLine = new Line(firstPoint, secondPoint);
+        var secondLine = new Line(firstPoint, thirdPoint);
+        var thirdLine = new Line(thirdPoint, secondPoint);
+
+        jsConsole.writeLine('Line lengths ---------------------------------');
+        jsConsole.writeLine(firstLine.getLength());
+        jsConsole.writeLine(secondLine.getLength());
+        jsConsole.writeLine(thirdLine.getLength());
+        jsConsole.writeLine();
+
+        jsConsole.writeLine('Doest lines form a triangle = ' + isTrianglePossible(firstLine, secondLine, thirdLine));
+        
+    </script>
+</body>
+</html>

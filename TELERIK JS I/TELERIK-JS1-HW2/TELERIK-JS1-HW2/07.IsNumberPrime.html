@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>       
+        function isPrime(n)
+        {
+            if (n < 2) {
+                return false;
+            }
+
+            var q = Math.sqrt(n);
+
+            for (var i = 2; i <= q; i++) {
+                if(n % i == 0)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        for (var j = 0; j < 100; j++) {
+            jsConsole.writeLine("Numner " + j + " is prime:" + isPrime(j));
+        }
+    </script>
+</body>
+</html>

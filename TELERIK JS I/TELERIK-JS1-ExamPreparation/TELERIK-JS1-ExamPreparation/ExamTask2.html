@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    function Solve(params) {
+        var firstLine = params[0].split(' ');
+        var R = parseInt(firstLine[0]);
+        var C = parseInt(firstLine[1]);
+        var matrix = [];
+
+        params = params.splice(1);
+
+        for (var i = 0; i < R; i++) {
+            matrix[i] = [];
+            var line = params[i].split(' ');
+            var filler = Math.pow(2, i);
+            for (var j = 0; j < C; j++) {
+               
+                matrix[i][j] = {
+                    number: filler,
+                    visited: false,
+                    direction: line[j]
+                }
+                 filler++;
+            }
+        }
+        //console.log(matrix);
+        var currentRow = 0;
+        var currentCol = 0;
+        var sum = 0;
+        var counter = 0;
+        while (true) {
+            if (currentRow >= R || currentCol >= C
+                    || currentRow < 0 || currentCol < 0) {
+                return "successed with " + sum;
+            }
+            if (matrix[currentRow][currentCol].visited) {
+                return 'failed at ' + "(" + currentRow + ", " + currentCol + ")";
+            }
+
+            if (matrix[currentRow][currentCol].direction == 'dr') {
+                sum += matrix[currentRow][currentCol].number;
+                matrix[currentRow][currentCol].visited = true;
+                currentRow++;
+                currentCol++;
+                
+                
+                
+            }
+            else if (matrix[currentRow][currentCol].direction == "ur") {
+                sum += matrix[currentRow][currentCol].number;
+
+                matrix[currentRow][currentCol].visited = true;
+                currentRow--;
+                currentCol++;
+                
+                
+            }
+            else if (matrix[currentRow][currentCol].direction == "ul") {
+
+
+                sum += matrix[currentRow][currentCol].number;
+                matrix[currentRow][currentCol].visited = true;
+                currentRow--;
+                currentCol--;
+                
+                
+            }
+            else if (matrix[currentRow][currentCol].direction == "dl") {
+                sum += matrix[currentRow][currentCol].number;
+                matrix[currentRow][currentCol].visited = true;
+                
+                currentRow++;
+                currentCol--;
+                
+                
+            }
+            
+        }
+    }
+
+    var args = [
+  '3 5',
+  'dr dl dr ur ul',
+  'dr dr ul ur ur',
+  'dl dr ur dl ur'
+    ]
+    var args2 = [
+  '3 5',
+  'dr dl dl ur ul',
+  'dr dr ul ul ur',
+  'dl dr ur dl ur'
+    ]
+
+    var test3 = ['3 5',
+        'dl dl dl ur ul',
+          'dr dr ul ul ur',
+          'dl dr ur dl ur']
+
+    console.log(Solve(test3));
+
+</script>
+</body>
+</html>

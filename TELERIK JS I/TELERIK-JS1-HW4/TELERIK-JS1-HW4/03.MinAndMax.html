@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var sequenceOfNumbers = [2, 12, 44, 1.2, 1, 3, 2, 654, 543.123, 654.1];
+        var biggestNumber = -Infinity;
+        var smallestNumber = Infinity;
+        for (var i = 0; i < sequenceOfNumbers.length; i++) {
+            if (sequenceOfNumbers[i] > biggestNumber) {
+                biggestNumber = sequenceOfNumbers[i];
+            }
+            if (sequenceOfNumbers[i] < smallestNumber) {
+                smallestNumber = sequenceOfNumbers[i];
+            }
+        }
+        jsConsole.writeLine("Biggest number is:" + biggestNumber);
+        jsConsole.writeLine("Smallest number is:" + smallestNumber);
+        // second way
+        var max = 0;
+        var min = 0;
+        for (var i = 0; i < sequenceOfNumbers.length; i++) {
+            if (sequenceOfNumbers[max] < sequenceOfNumbers[i]) {
+                max = i;
+            }
+            if (sequenceOfNumbers[min] > sequenceOfNumbers[i]) {
+                min = i;
+            }
+        }
+        jsConsole.writeLine("Biggest number is:" + sequenceOfNumbers[max]);
+        jsConsole.writeLine("Smallest number is:" + sequenceOfNumbers[min]);
+    </script>
+</body>
+</html>

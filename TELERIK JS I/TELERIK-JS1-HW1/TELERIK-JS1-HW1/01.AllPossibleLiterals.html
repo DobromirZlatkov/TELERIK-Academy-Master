@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var arrayOfTypes = [undefined,new Number(5),5, 10.1354234, 'a', "haha", true, null, ' ', ""];
+        jsConsole.writeLine(typeof (arrayOfTypes));
+        for (var i = 0; i < arrayOfTypes.length; i++) {
+            jsConsole.writeLine(typeof(arrayOfTypes[i]))      
+        }
+    </script>
+</body>
+</html>

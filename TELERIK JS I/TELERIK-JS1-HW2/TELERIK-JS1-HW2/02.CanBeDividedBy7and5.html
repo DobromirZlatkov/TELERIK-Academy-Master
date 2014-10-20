@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        for (var i = 0; i < 100; i++) {
+            if(i % 5 === 0 && i % 7 === 0)
+            {
+                jsConsole.writeLine("number " + i + " can be divided by 7 and 5");
+            }
+        }
+    </script>
+</body>
+</html>

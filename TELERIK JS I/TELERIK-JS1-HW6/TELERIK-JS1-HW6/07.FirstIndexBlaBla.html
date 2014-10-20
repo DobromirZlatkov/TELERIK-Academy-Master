@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var checker = function checkNextElements(array, possition) {
+            if (possition > array.length) {
+                return false;
+            }
+
+            if (array.indexOf(array[possition]) === 0 || array.indexOf(array[possition]) === array.length - 1) {
+                return false;
+            }
+            if (array[possition] > array[possition - 1] && array[possition] > array[possition + 1]) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+        function FirstBiggerElement(array, checkFunc) {
+
+            for (var i = 0; i < array.length; i++) {
+
+                var index = array.indexOf(array[i]);
+
+                if (checkFunc(array, index)) {
+                    return index;
+                }
+            }
+            return -1;
+        }
+
+        var numbers = [1, 2, 3, 4, 5, 1111, 5, 2, 1, 4, 5, 5, 4, 1, 55];
+        jsConsole.writeLine(FirstBiggerElement(numbers, checker));
+    </script>
+
+</body>
+</html>

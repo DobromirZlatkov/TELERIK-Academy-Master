@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function Solve(params){
+            var matrixSize = params[0].split(' ');
+            var M = parseInt(matrixSize[0]);
+            var N = parseInt(matrixSize[1]);
+
+            var startPossitions = params[1].split(' ');
+            var currentRow = parseInt(startPossitions[0]);
+            var currentCol = parseInt(startPossitions[1]);
+            
+            var matrix = [];
+            loadMatrix(matrix, params);
+            var sum = 0;
+            var stepCounter = 0;
+            while (true) {
+                if (currentRow >= M || currentCol >= N 
+                    || currentRow < 0 || currentCol < 0) {
+                    return 'out ' + sum;
+                }
+                if (matrix[currentRow][currentCol].visited) {
+                    return 'lost ' + stepCounter;
+                }
+
+
+                //TO DO check positions of + and -
+                if (matrix[currentRow][currentCol].direction == 'l') {
+                    matrix[currentRow][currentCol].visited = true;
+                    sum += matrix[currentRow][currentCol].number;
+                    stepCounter++
+                    currentCol--;
+                }
+                else if (matrix[currentRow][currentCol].direction == 'r') {
+                    matrix[currentRow][currentCol].visited = true;
+                    sum += matrix[currentRow][currentCol].number;
+                    stepCounter++;
+                    currentCol++;                   
+                }
+                else if (matrix[currentRow][currentCol].direction == 'd') {
+                    matrix[currentRow][currentCol].visited = true;
+                    sum += matrix[currentRow][currentCol].number;
+                    stepCounter++;
+                    currentRow++;
+                    
+                }
+                else if (matrix[currentRow][currentCol].direction == 'u') {
+                    matrix[currentRow][currentCol].visited = true;
+                    sum += matrix[currentRow][currentCol].number;
+                    stepCounter++;
+                    currentRow--;                    
+                }
+
+            }
+
+            function loadMatrix(matrix, params) {
+                params = params.splice(2);
+                var filler = 0;
+
+                for (var i = 0; i < M; i++) {
+                    matrix[i] = [];
+                    for (var j = 0; j < N; j++) {
+                        filler++;
+                        matrix[i][j] = {
+                            direction: params[i][j],
+                            number: filler,
+                            visited: false
+                        }
+                    }
+                }
+            }
+        }
+
+        var args = [
+ "5 8",
+ "0 0",
+ "rrrrrrrd",
+ "rludulrd",
+ "lurlddud",
+ "urrrldud",
+ "ulllllll"]
+
+        
+        console.log(Solve(args));
+    </script>
+</body>
+</html>

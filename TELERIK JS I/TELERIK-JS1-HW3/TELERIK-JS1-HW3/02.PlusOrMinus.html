@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var firstNumber = 23;
+        var secondNumber = 12;
+        var thirdNumber = -4;
+        if (firstNumber === 0 || secondNumber === 0 || thirdNumber === 0) {
+            jsConsole.writeLine("Product is 0");
+        }
+        if (firstNumber > 0) {
+            if (secondNumber > 0) {
+                if (thirdNumber > 0) {
+                    jsConsole.writeLine("+");
+                }
+                else if (thirdNumber < 0) {
+                    jsConsole.writeLine("-");
+                }
+            }
+            else if (secondNumber < 0) {
+                if (thirdNumber > 0) {
+                    jsConsole.writeLine("-");
+                }
+                else if (thirdNumber < 0) {
+                    jsConsole.writeLine("+");
+                }
+            }
+        }
+        else if(firstNumber < 0) {
+            if (secondNumber > 0)
+            {
+                if (thirdNumber > 0) {
+                    jsConsole.writeLine("-");
+                }
+                else if (thirdNumber < 0) {
+                    jsConsole.writeLine("+");
+                }
+            }
+            else if (secondNumber < 0) {
+                if (thirdNumber > 0) {
+                    jsConsole.writeLine("+");
+                }
+                else if (thirdNumber < 0) {
+                    jsConsole.writeLine("-");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+ <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+
+    <div><div><div><div></div></div></div></div>
+    <div><div><div><div></div></div></div></div>
+    <div><div><div><div></div></div></div></div>
+
+    <script>
+        function CountDivs() {
+            var numberOfDivs = document.getElementsByTagName("div").length;
+            jsConsole.writeLine("Number of divs = " + numberOfDivs);
+        }
+
+        CountDivs();
+    </script>
+</body>
+</html>

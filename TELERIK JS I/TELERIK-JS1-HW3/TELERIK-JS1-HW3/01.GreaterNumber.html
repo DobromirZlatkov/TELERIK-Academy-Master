@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var firstNumber = 10;
+        var secondNumber = 10.5;
+        if (firstNumber > secondNumber) {
+            jsConsole.writeLine(firstNumber + " is bigger than " + secondNumber);
+        }
+        else if (secondNumber > firstNumber) {
+
+            jsConsole.writeLine(secondNumber + " is bigger than " + firstNumber);
+        }
+        else {
+            jsConsole.writeLine("Numbers are equal");
+        }
+    </script>
+</body>
+</html>

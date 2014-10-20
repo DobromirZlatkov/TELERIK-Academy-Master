@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>   
+        function FindMinAndMax(obj) {
+
+            var min = "z";
+            var max = "a";
+
+            for (var prop in obj) {
+                if (prop > max) {
+                    max = prop;
+                }
+                if (prop < min) {
+                    min = prop;
+                }
+            }
+
+            jsConsole.writeLine("Object: " + obj);
+            jsConsole.writeLine("Min: " + min);
+            jsConsole.writeLine("Max: " + max);
+            jsConsole.writeLine();
+        }
+        FindMinAndMax(document);
+        FindMinAndMax(window);
+        FindMinAndMax(navigator);
+    </script>
+</body>
+</html>

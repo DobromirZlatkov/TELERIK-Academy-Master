@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>	         
+        var n = 120;
+        n = n.toString();
+
+        var firstDigit = n[2];
+        var secondDigit = n[1];
+        var thirdDigit = n[0];
+
+        var firstDigits = [ "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ];
+        var eleven = [ "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "ninteen" ];
+        var secondDigits = [ "twenty ", "thirty ", "fourty ", "fifty ", "sixty ", "seventy ", "eighty ", "ninty " ];
+
+        if (thirdDigit > 0)
+        {
+            jsConsole.write(firstDigits[thirdDigit]);
+            jsConsole.write(" hundred ");
+        }
+        if (firstDigit > 0)
+        {
+            if ((secondDigit == 0) || (secondDigit == 1))
+            {
+                jsConsole.write("and ");
+            }
+        }
+            
+        if (secondDigit == 1)
+        {
+            jsConsole.write(eleven[firstDigit]);
+        }
+        if (secondDigit != 1 && secondDigit > 0)
+        {
+            jsConsole.write(secondDigits[secondDigit - 2]);
+            
+        }
+        if (secondDigit != 1)
+        {
+            if (secondDigit > 0 && firstDigit == 0)
+            {
+                firstDigits[firstDigit] = " ";
+            }
+            jsConsole.write(firstDigits[firstDigit]);
+        }   
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+  <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function copy(obj) {
+            if (typeof (obj) != "object") {
+                return obj;
+            }
+            else {
+                var copyObj = {};
+                for (var prop in obj) {
+                    copyObj[prop] = copy(obj[prop]);
+                }
+                return copyObj;
+            }
+        }
+        // objects to copy
+        function Student(fName, sName, years) {
+            this.firstName = fName;
+            this.secondName = sName;
+            this.years = years;
+        };
+        var firstStudent = Student('Pesho', 'Ivanov', 23);
+
+        var numbers = [1, 2, 3, 4, 5, 6, 7];
+        var name = 'Ivan Ivanov';
+
+        // copy objects
+        var studentCopy = copy(firstStudent);
+        var copyNumbers = copy(numbers);
+        var copyName = copy(name);
+
+        //print copy objects
+        for (var prop in studentCopy) {
+            jsConsole.write(studentCopy[prop] + ' ');
+        }
+        jsConsole.writeLine();
+
+        for (var i in copyNumbers) {
+            jsConsole.write(copyNumbers[i] + ' ');
+        }
+        jsConsole.writeLine();
+        
+        jsConsole.writeLine(copyName);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = 'The seat of government of the Donetsk People’s Republic is an 11-story building—once the headquarters of the regional administration until it was stormed by pro-Russian fighters in early April—that houses everything from a press-accreditation office to a medical dispensary.';
+        var symbol = '&nbsp';
+        function replaceWhiteSpaces(text, symbol) {
+            for (var i = 0; i < text.length; i++) {
+                if (text[i] = ' ') {
+                    text.replace()
+                }
+            }
+            return text;
+        }
+
+        text = replaceWhiteSpaces(text, symbol);
+        jsConsole.writeLine(text);
+    </script>
+</body>
+</html>

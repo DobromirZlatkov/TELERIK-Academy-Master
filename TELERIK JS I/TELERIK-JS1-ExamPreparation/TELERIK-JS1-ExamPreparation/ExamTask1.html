@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+
+<script>
+    function Solve(params) {      
+            var S = parseInt(params);
+
+            var numbers = [3, 4, 10];
+            var counter = 0;
+            var papaz = 0;
+            var firstPapaz = 0;
+            var zeroPapaz = 0;
+
+            while (papaz <= S || firstPapaz <= S || firstPapaz <= S) {
+                for (var i = 0; i < 3; i++) {
+                    zeroPapaz += numbers[i];
+                    for (var j = 0; j < 3; j++) {
+                        firstPapaz += numbers[i] + numbers[j];
+                        if (firstPapaz == S) {
+                            counter++;
+                        }
+                        for (var k = 0; k < 3; i++) {
+                            papaz += numbers[i] + numbers[k] + numbers[i];
+                            if (papaz == S) {
+                                counter++;
+                            }
+                        }
+                    }
+                }
+            }
+           
+        
+        }
+        console.log(Solve('10'));
+
+    
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

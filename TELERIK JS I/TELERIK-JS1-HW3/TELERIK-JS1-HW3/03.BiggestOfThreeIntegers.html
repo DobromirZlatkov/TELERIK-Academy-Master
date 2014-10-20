@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+     <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var n1 = 134;
+        var n2 = 122;
+        var n3 = 3114;
+
+        if (n1 > n2) {
+            if (n1 > n3) {
+                jsConsole.writeLine("Biggest number is: " + n1);
+            }
+        }
+        else if (n1 == n2) {
+            if (n1 > n3) {
+                jsConsole.writeLine("Number " + n1 + " and " + n2 + "are equal and bigger than " + n3);
+            }
+        }
+        if (n2 > n1) {
+            if (n2 > n3) {
+                jsConsole.writeLine("Biggest number is: " + n2);
+            }
+        }
+        if (n3 > n1) {
+            if (n3 > n2) {
+                jsConsole.writeLine("Biggest number is: " + n3);
+            }
+        }
+        else if (n1 == n3) {
+            if (n1 > n2) {
+                jsConsole.writeLine("Number " + n1 + " and " + n3 + "are equal and bigger than " + n2);
+            }
+        }
+        if (n1 == n2 && n1 == n3) {
+            jsConsole.writeLine("Numbers are equal");
+        }
+    </script>
+</body>
+</html>

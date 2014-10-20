@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <script>
+        var text = "We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else.";
+
+        text = toUpper(text);
+        text = toMix(text);
+        text = toLower(text);
+        jsConsole.writeLine(text);
+
+
+        function toUpper(text) {
+            var oppenTag = "<upcase>",
+                closeTag = "</upcase>",
+                indexOpenTag = text.indexOf(oppenTag);
+            while (indexOpenTag > -1) {
+                var textInside = text.substring(indexOpenTag + oppenTag.length, text.indexOf(closeTag, indexOpenTag));
+                text = text.replace(textInside, textInside.toUpperCase());
+                indexOpenTag = text.indexOf(oppenTag, indexOpenTag + 1);
+            }
+            return text;
+        }
+        function toMix(text) {
+            var openTag = "<mixcase>",
+                closeTag = "</mixcase>",
+                startIndex = text.indexOf(openTag);
+            while (startIndex > -1) {
+                var textInside = text.substring(startIndex + openTag.length, text.indexOf(closeTag, startIndex));
+                var mixedTextInside = '';
+                for (var i = 0; i < textInside.length; i++) {
+                    if (i % 2 == 0) {
+                        mixedTextInside += textInside[i].toUpperCase();
+                    }
+                    else {
+                        mixedTextInside += textInside[i].toLowerCase();
+                    }
+                }
+                text = text.replace(textInside, mixedTextInside);
+                startIndex = text.indexOf(openTag, startIndex + 1);
+            }
+            return text;
+        }
+        function toLower(text) {
+            var oppenTag = "<lowcase>",
+                closeTag = "</lowcase>",
+                indexOpenTag = text.indexOf(oppenTag);
+            while (indexOpenTag > -1) {
+                var textInside = text.substring(indexOpenTag + oppenTag.length, text.indexOf(closeTag, indexOpenTag));
+                text = text.replace(textInside, textInside.toLowerCase());
+                indexOpenTag = text.indexOf(oppenTag, indexOpenTag + 1);
+            }
+            return text;
+        }
+    </script>
+</body>
+</html>

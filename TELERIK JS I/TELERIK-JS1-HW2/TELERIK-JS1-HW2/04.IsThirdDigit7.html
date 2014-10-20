@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var number = 4712;
+        var numberAsString = number.toString();
+        var trueOrFalse = false;
+        if (numberAsString[numberAsString.length - 3] == 7) {
+            trueOrFalse = true;
+        } 
+        else {
+            trueOrFalse = false;
+        }
+        jsConsole.writeLine("Third digit of " + number + " is 7 :" + trueOrFalse);
+    </script>
+</body>
+</html>

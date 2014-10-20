@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function Solve(params) {
+            var S = parseInt(params[0]);
+
+            var numbers = [3, 4, 10];
+            var counter = 0;
+            var plural = 0;
+            if (numbers[0] % S == numbers[1]) {
+                S -= numbers[1];
+                counter++;
+            }
+            while (S > 0) {
+                S -= numbers[0];
+                               
+                counter++;
+                console.log(counter);
+            }
+
+            return counter;
+        }
+    </script>
+</body>
+</html>

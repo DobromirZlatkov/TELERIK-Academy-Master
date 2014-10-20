@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var x = 2;
+        var y = 2;
+        var CenterX = 1;
+        var CenterY = 1;
+        
+        var isInCircle = ((x - CenterX) * (x - CenterX)) +
+                ((y - CenterY) * (y - CenterY));
+        if (isInCircle < 9) {
+            jsConsole.writeLine("Point is in the circle.");
+            //check if point is in rectangle
+            if (((x < -1) || (x > 5))) {
+                jsConsole.writeLine("Point is outside the rectangle");
+            }
+            else if (((y > 1) || (y < -1))) {
+                jsConsole.writeLine("Point is outside the rectangle");
+            }
+            else if (((x > -1) || (x < 5)) && ((y < 1) || (y > -1))) {
+                jsConsole.writeLine("Point is in the rectangle");
+            }
+
+        }
+        else {
+            jsConsole.writeLine("Point is outside the circle.");
+        }
+        //check if point is in rectangle and outside circle
+        if (((x < -1) || (x > 5))) {
+            jsConsole.writeLine("Point is outside the rectangle");
+        }
+        else if (((y > 1) || (y < -1))) {
+            jsConsole.writeLine("Point is outside the rectangle");
+        }
+        else if (((x > -1) || (x < 5)) && ((y < 1) || (y > -1))) {
+            jsConsole.writeLine("Point is in the rectangle");
+        }
+    </script>
+</body>
+</html>

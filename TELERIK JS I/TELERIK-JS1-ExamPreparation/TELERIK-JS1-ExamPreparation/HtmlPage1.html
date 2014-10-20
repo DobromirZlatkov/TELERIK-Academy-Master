@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function Solve(params) {
+            var S = params;
+
+            var numbers = [4, 3, 10];
+            var counter = 1;
+
+            for (var i = 1; i < Math.pow(2, 3) ; i++) {
+                var sum = 0;
+
+                for (var j = 0; j < 3; j++) {
+                    sum += ((i >> j) & 1) * numbers[j];
+                }
+                if (sum == S) {
+                    counter++;
+                }
+            }
+            return counter;
+        }
+        console.log(Solve(40));
+    </script>
+</body>
+</html>

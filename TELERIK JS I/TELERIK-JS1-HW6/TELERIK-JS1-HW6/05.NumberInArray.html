@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        function count() {
+            var numbersArray = [11, 2, 1, 1, 1, 2, 3, 2, 2, 2, 4, 4, 5, 6, 6, 6, 7, 7, 5, 4, 5, 5];
+            var number = 1;
+
+            countNumbers(numbersArray, number);
+        }
+
+        function countNumbers(array, num) {
+            var counter = 0;
+            for (var i = 0; i < array.length; i++) {
+                if (array[i] == num) {
+                    counter++;
+                }
+            }
+            jsConsole.writeLine('Number ' + num + ' appears ' + counter + ' times');
+        }
+
+        count();
+
+    </script>
+</body>
+</html>

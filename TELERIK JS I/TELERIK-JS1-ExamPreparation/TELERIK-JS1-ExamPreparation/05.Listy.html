@@ -1,0 +1,237 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+
+
+<script>
+
+    //#!_@*#!@)&$@#*_$@&)!(@*#!@)#*&%&_$^_!@*#^) WTF
+    function Solve(params) {
+
+        var arrayOfFunctions = [];
+
+        for (var i = 0; i < params.length; i++) {
+            var currentRow  = params[i];
+            var isDefiningFunction = false;
+            var isInBrackets = false;
+            var functionName = '';
+            var currentOperator = '';
+            var variableInBrackets = '';
+            var numbersInBrackets = [];
+            for (var j = 0; j < currentRow.length; j++) {
+
+                //search for def              
+                if (currentRow.substring(j, j + 4) == 'def ') {
+                    isDefiningFunction = true;
+                    j += 4;
+                }
+
+                //search for operator
+                if (isOperator(currentRow.substring(j, j + 3)) && !isDefiningFunction && !isInBrackets) {
+                    currentOperator = currentRow.substring(j, j + 3);
+                }
+
+                var currentChar = currentRow[j];
+
+                //put numbers in array
+                if (currentChar == '[') {
+                    isInBrackets = true;
+                    continue;
+                }
+               
+                if (isInBrackets) {
+                    if (currentChar !== ',' && currentChar !== ' ' && currentChar !== ']') {
+                        variableInBrackets += currentChar;
+                    }
+                    if (variableInBrackets != '' && (currentChar == ',' || currentChar == ' ' || currentChar == ']')) {
+                        // possible return true without number
+                        if (isNumber(variableInBrackets)) {
+                            numbersInBrackets.push(variableInBrackets);
+                        }
+                        else {
+                            for (var p = 0; p < arrayOfFunctions.length; p++) {
+                                if (arrayOfFunctions[p].funcName == variableInBrackets) {
+                                   // console.log(arrayOfFunctions[p].funcResult);
+                                    if (isNumber(arrayOfFunctions[p].funcResult)) {
+                                        numbersInBrackets.push(arrayOfFunctions[p].funcResult);
+                                      //  console.log('mashala' + isNumber(arrayOfFunctions[p].funcResult));
+                                        break;
+                                    }
+                                    else {
+                                        
+                                        var functionResult = calculateFunction(currentOperator, arrayOfFunctions[p].funcArrayOfNumbers);
+                                        numbersInBrackets.push(functionResult);                                       
+                                        break;
+                                    }
+                                }
+                            }                          
+                        }
+                        variableInBrackets = '';
+                    }
+                }
+                
+
+                
+                //jump over emptySpaces
+                if (currentChar == ' ') {
+                    continue;
+                }
+
+               
+                // find functionName
+                if (isDefiningFunction) {
+                    // next will be func name
+                    if (j + 1 < currentRow.length && (currentRow[j + 1] == ' ' || currentRow[j + 1] == '[')) {
+                        isDefiningFunction = false;
+                    }
+                    functionName += currentChar;
+                }
+            }
+           //console.log(numbersInBrackets);
+            //callculate function
+            if (currentOperator != '') {
+                var funcResult = calculateFunction(currentOperator, numbersInBrackets);
+
+                arrayOfFunctions.push({
+                    funcName: functionName,
+                    funcResult: funcResult,
+                    funcArrayOfNumbers: numbersInBrackets
+                })
+            }
+            else {
+                arrayOfFunctions.push({
+                    funcName: functionName,
+                    funcResult: 'X',
+                    funcArrayOfNumbers: numbersInBrackets
+                })
+            }
+            
+        }
+        //console.log(arrayOfFunctions);
+        function isNumber(variable) {
+            if (variable === 0) {
+                return true;
+            }
+
+            if (variable == ' ') {
+                return false;
+            }
+
+            return !isNaN(variable);
+        }
+
+        function calculateFunction(currentOperator, numbersInBrackets) {
+            
+                switch (currentOperator) {
+                    case 'sum': return findSum(numbersInBrackets);
+
+                    case 'min': numbersInBrackets.sort(orderBy);
+                       // var papaz = numbersInBrackets.sort(orderBy);
+                       // console.log("lqlq" + papaz);
+                        return numbersInBrackets[0];
+
+                    case 'max': numbersInBrackets.sort(orderBy);
+                       // var papaz = numbersInBrackets.sort(orderBy);
+                       // console.log("lqlq" + papaz);
+                        return numbersInBrackets[numbersInBrackets.length - 1];
+                    case 'avg': return parseInt(findSum(numbersInBrackets) / numbersInBrackets.length);
+            }
+        }
+
+        function isOperator(string) {
+            switch (string) {
+                case 'sum': return true;
+                case 'min': return true;
+                case 'max': return true;
+                case 'avg': return true;
+            }
+            return false;
+        }
+
+
+        function findSum(numbersInBrackets) {
+            var sum = 0;
+            for (var i = 0; i < numbersInBrackets.length; i++) {
+                sum += parseInt(numbersInBrackets[i]);
+            }
+            return sum;
+        }
+
+        function orderBy(a, b) {
+            a = parseInt(a);
+            b = parseInt(b);
+            return (a == b) ? 0 : (a > b) ? 1 : -1;
+        };
+
+       // console.log(arrayOfFunctions);
+        if (arrayOfFunctions[arrayOfFunctions.length - 1].funcResult == 'X') {
+            return arrayOfFunctions[arrayOfFunctions.length - 1].funcArrayOfNumbers.toString();
+        }
+        return arrayOfFunctions[arrayOfFunctions.length - 1].funcResult.toString();
+        
+    }
+
+
+
+
+
+
+    var input = ['def func sum[50, 3, 4, 2, 6, 3]',
+                 'def func2 [5, 3, 7, 2, 6, 3]',
+                 'def func3 min[func2]',
+            'def func4 max[5, 3, 7, 2, 6, 3]',
+            'def func5 avg[5, 3, 7, 2, 6, 3]',
+            'def func6 sum[func2, func3, func4 ]',
+            'sum[func6, func4]',
+    ]
+    var test2 = [
+        'def var1[1, 2, 3 ,4]',
+        'def var2 sum[var1, 20, 70]',
+        'def var3 min[var1]',
+        'avg[var2, var3]',
+    ]
+
+    var test3 = [
+        'def var1 [1, 2, 6, 8]',
+        'def var2 sum [1, 5, -10, 20]',
+        'def var3 max  [5, 2, 4, var2, 2]',
+        'def var4 min   [var1, 6, 50]',
+        'def var5 avg[var1]',
+        'def var6 sum[var1, var1, 1]'
+    ]
+
+    var test4 = [
+        'def newFunc[123,432    , 4]',
+        'def blaBLA sum[newFunc]',
+        'def BLAbla min[newFunc]',
+        'avg[BLAbla,blaBLA]',
+    ]
+
+    var test5 = [
+        'def func sum[1, 2, 3, -6]',
+        'def newList [func, 10, 1]',
+        'def newFunc sum[func, 100, newList]',
+        '[newFunc]'
+
+    ]
+    var test6 = [
+        'def negFunc     [      -123,-432 ,-6474567    , 4]',
+        'def negsum sum[negFunc]',
+        'def negavg avg[negFunc]',
+        'min[                 negavg,              negsum          ]',
+        ]
+    console.log(Solve(test6));
+</script>
+
+
+    
+
+
+
+
+
+</body>
+</html>

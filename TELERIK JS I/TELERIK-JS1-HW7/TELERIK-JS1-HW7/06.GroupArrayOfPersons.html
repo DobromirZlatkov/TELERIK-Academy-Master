@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+      
+        function PrintDictionary(dictionary) {
+            for (var i in dictionary) {
+                jsConsole.write(dictionary[i].Key + " : ")
+                for (var j = 0; j < dictionary[i].Value.length; j++) {
+                    jsConsole.write(dictionary[i].Value[j].firstname + " " + dictionary[i].Value[j].lastname + " " + dictionary[i].Value[j].age + "; ");
+                }
+                jsConsole.writeLine();
+            }
+        }
+        
+        function groupPersons(persons, property) {
+            var dictionary = [];
+
+            if (property == "firstname") {
+                var firstNameGroup = [];
+
+                for (var i in persons) {
+
+                    var groupedPersons = [];
+                    var doKeyExists = false;
+
+                    for (var j = 0; j < persons.length; j++) {
+
+                        if (persons[i].firstname == persons[j].firstname) {
+                            groupedPersons.push(persons[j]);
+                        }
+                    }
+
+                    for (var j = 0; j < dictionary.length; j++) {
+                        if (dictionary[j].Key == persons[i].firstname) {
+                            doKeyExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!doKeyExists) {
+                        dictionary.push({Key: persons[i].firstname, Value:groupedPersons})
+                    }                                       
+                    
+                }
+
+            }
+            else if (property == "lastname") {
+                var firstNameGroup = [];
+
+                for (var i in persons) {
+
+                    var groupedPersons = [];
+                    var doKeyExists = false;
+
+                    for (var j = 0; j < persons.length; j++) {
+
+                        if (persons[i].lastname == persons[j].lastname) {
+                            groupedPersons.push(persons[j]);
+                        }
+                    }
+
+                    for (var j = 0; j < dictionary.length; j++) {
+                        if (dictionary[j].Key == persons[i].lastname) {
+                            doKeyExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!doKeyExists) {
+                        dictionary.push({ Key: persons[i].lastname, Value: groupedPersons })
+                    }
+
+                }
+
+            }
+            else {
+                var firstNameGroup = [];
+
+                for (var i in persons) {
+
+                    var groupedPersons = [];
+                    var doKeyExists = false;
+
+                    for (var j = 0; j < persons.length; j++) {
+
+                        if (persons[i].age == persons[j].age) {
+                            groupedPersons.push(persons[j]);
+                        }
+                    }
+
+                    for (var j = 0; j < dictionary.length; j++) {
+                        if (dictionary[j].Key == persons[i].age) {
+                            doKeyExists = true;
+                            break;
+                        }
+                    }
+
+                    if (!doKeyExists) {
+                        dictionary.push({ Key: persons[i].age, Value: groupedPersons })
+                    }
+
+                }
+            }
+            return dictionary;
+        }
+
+        var persons = [
+         { firstname: "Gosho", lastname: "Petrov", age: 32 },
+         { firstname: "Bay", lastname: "Ivan", age: 81 },
+         { firstname: "Bay", lastname: "Georgi", age: 81 },
+         { firstname: "Unknown", lastname: "Petrov", age: 32 },
+         { firstname: "Gosho", lastname: "Ivanov", age: 23 },
+        { firstname: "Gosho", lastname: "Ivanov", age: 32 }
+        ];
+
+        var groupByFirstName = groupPersons(persons, "firstname");
+        var groupByLastName = groupPersons(persons, "lastname");
+        var groupByAge = groupPersons(persons, "age");
+
+        
+        PrintDictionary(groupByFirstName);
+        jsConsole.writeLine("-----------------------------------------------");
+        PrintDictionary(groupByLastName);
+        jsConsole.writeLine("-----------------------------------------------");
+        PrintDictionary(groupByAge);
+
+    </script>
+</body>
+</html>

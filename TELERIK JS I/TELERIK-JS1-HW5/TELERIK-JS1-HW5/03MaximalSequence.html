@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+    <script src="scripts/js-console.js"></script>
+    <p>
+        Write a script that finds the maximal sequence of equal elements in an array.
+		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.
+    </p>
+    <script>
+        var array = [1, 1, 1, 2, 3, 3, 3, 4, 4, 4],
+        equalnumbersCount = 1,
+        mostEqualNumbers = 0,
+        bestNumber = 0,
+        temp = 1;
+
+        for (var i = 1; i <= array.length; i++) {
+
+            var previousNumber = array[i - 1],
+                currentNumber = array[i];
+
+            if (previousNumber !== currentNumber) {
+                if (mostEqualNumbers < equalnumbersCount) {
+                    mostEqualNumbers = equalnumbersCount;
+                }
+                equalnumbersCount = 1;
+            }
+            else {
+                equalnumbersCount++;
+            }
+        }
+
+        for (var i = 1; i <= array.length; i++) {
+
+            var previousNumber = array[i - 1],
+                currentNumber = array[i];
+
+            if (previousNumber !== currentNumber) {
+                equalnumbersCount = 1;
+            }
+            else {
+                equalnumbersCount++;
+                if (equalnumbersCount === mostEqualNumbers) {
+                    PrintAllPossibleSequences(array, i - (equalnumbersCount - 1), equalnumbersCount);
+                }
+            }
+        }
+
+
+        function PrintAllPossibleSequences(array, startIndex, count) {
+            for (var i = startIndex; i < startIndex + count; i++) {
+                jsConsole.write(array[i] + " ");
+            }
+            jsConsole.writeLine();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var array = [1, 2, 4, 12, 3, 4];
+        function PrintArray(obj) {
+            console.log(obj.join(","));
+        }
+        function orderBy(a, b) {
+            return (a == b) ? 0 : (a > b) ? 1 : -1;
+        }
+        PrintArray(array);
+        array.sort();
+        PrintArray(array);
+        array.sort(orderBy);
+        PrintArray(array);
+        array.reverse();
+        PrintArray(array);
+        array.splice(2, 3, 32, 12, 32);
+        PrintArray(array);
+        array.concat(100, 100);
+        PrintArray(array);
+        array.filter()
+
+    </script>
+</body>
+</html>

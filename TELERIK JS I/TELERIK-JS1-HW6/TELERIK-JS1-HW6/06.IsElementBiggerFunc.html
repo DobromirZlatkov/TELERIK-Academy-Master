@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <input id="tb-number" type="text"></input>
+    <a id="btn-is-element-bigger" onclick="isElementBigger()" href="#">
+        Is Element Bigger than neighbours
+    </a>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+         function isElementBigger(){
+             var numbers = [1, 2, 3, 4, 5, 6, 4, 2, 1, 4, 5, 6, 4, 1, 55];
+             var number = jsConsole.readInteger('#tb-number');
+             jsConsole.writeLine(CheckNextElements(numbers, number));
+         }
+
+         function CheckNextElements(array, possition) {
+             if (possition > array.length) {
+                 return false;
+             }
+
+             if (array.indexOf(array[possition]) === 0 || array.indexOf(array[possition]) === array.length -1) {
+                 return false;
+             }
+             if (array[possition] > array[possition-1] && array[possition] > array[possition + 1]) {
+                 return true;
+             }
+             else {
+                 return false;
+             }
+         }
+    </script>
+</body>
+</html>

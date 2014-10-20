@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+     <link href="styles/js-console.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="js-console"></div>
+	<script src="scripts/js-console.js"></script>
+    <script>
+        var firstNumber = 11;
+        var secondNumber = 1;
+        var thirdNumber = 111;
+        //if (firstNumber >= secondNumber) {
+        //    if (secondNumber >= thirdNumber) {
+        //        jsConsole.writeLine(firstNumber + ", " + secondNumber + ", " + thirdNumber);              
+        //    }
+        //}
+        //if (firstNumber >= thirdNumber) {
+        //    if(thirdNumber >= secondNumber){
+        //        jsConsole.writeLine(firstNumber + ", " + thirdNumber + ", " + secondNumber);
+        //    }
+        //}
+        //if (secondNumber >= firstNumber) {
+        //    if (firstNumber >= thirdNumber) {
+        //        jsConsole.writeLine(secondNumber + ", " + firstNumber + ", " + thirdNumber);
+        //    }
+        //}
+        //if (secondNumber >= thirdNumber) {
+        //    if (thirdNumber >= firstNumber) {
+        //        jsConsole.writeLine(secondNumber + ", " + thirdNumber + ", " + firstNumber);
+        //    }
+        //}
+        //if (thirdNumber >= firstNumber) {
+        //    if (firstNumber >= secondNumber) {
+        //        jsConsole.writeLine(thirdNumber + ", " + firstNumber + ", " + secondNumber);
+        //    }
+        //}
+        //if (thirdNumber >= secondNumber) {
+        //    if (secondNumber >= firstNumber) {
+        //        jsConsole.writeLine(thirdNumber + ", " + secondNumber + ", " + firstNumber);
+        //    }
+        //}
+        //
+        if (firstNumber >= secondNumber && firstNumber >= thirdNumber) {
+            if(secondNumber >= thirdNumber){
+                jsConsole.writeLine(firstNumber + ", " + secondNumber + ", " + thirdNumber);
+            }
+            else {
+                jsConsole.writeLine(firstNumber + ", " + thirdNumber + ", " + secondNumber);
+            }
+        }
+        if (secondNumber >= firstNumber && secondNumber >= thirdNumber) {
+            if(firstNumber >= thirdNumber){
+                jsConsole.writeLine(secondNumber + ", " + firstNumber + ", " + thirdNumber);
+            }
+            else {
+                jsConsole.writeLine(secondNumber + ", " + thirdNumber + ", " + firstNumber);
+            }
+        }
+        if (thirdNumber >= secondNumber && thirdNumber >= firstNumber) {
+            if (firstNumber >= secondNumber) {
+                jsConsole.writeLine(thirdNumber + ", " + firstNumber + ", " + secondNumber);
+            }
+            else {
+                jsConsole.writeLine(thirdNumber + ", " + secondNumber + ", " + firstNumber);
+            }
+        }
+    </script>
+</body>
+</html>

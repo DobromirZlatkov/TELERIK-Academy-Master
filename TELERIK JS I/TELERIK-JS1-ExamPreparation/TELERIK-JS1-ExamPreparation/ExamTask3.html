@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+    function Solve(params) {
+        // all subsets of arr
+        var number = parseInt(params);
+        var arr = [3, 4, 10];
+        var powerset = powerSet(arr);
+        var counter = 0;
+        // subsets summing less than or equal to number
+        var subsets = [];
+
+        for (var i = 0; i < powerset.length; i++) {
+
+            var subset = powerset[i];
+
+            var sum = 0;
+            for (var j = 0; j < subset.length; j++) {
+                sum += subset[j];
+            }
+
+            if (sum == number) {
+                counter++;
+            }
+        }
+
+        
+        function powerSet(arr) {
+
+            // the power set of [] is [[]]
+            if (arr.length === 0) {
+                return [[]];
+            }
+
+            // remove and remember the last element of the array
+            var lastElement = arr.pop();
+
+            // take the powerset of the rest of the array
+            var restPowerset = powerSet(arr);
+
+
+            // for each set in the power set of arr minus its last element,
+            // include that set in the powerset of arr both with and without
+            // the last element of arr
+            var powerset = [];
+            for (var i = 0; i < restPowerset.length; i++) {
+
+                var set = restPowerset[i];
+
+                // without last element
+                powerset.push(set);
+
+                // with last element
+                set = set.slice(); // create a new array that's a copy of set
+                set.push(lastElement);
+                powerset.push(set);
+            }
+
+            return powerset;
+        };
+        return counter;
+    }
+    console.log(Solve(40));
+</script>
+</body>
+</html>
