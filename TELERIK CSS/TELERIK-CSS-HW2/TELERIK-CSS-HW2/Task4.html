@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="StyleSheets/TaskFourCSS.css">
+</head>
+<body>   
+    <div id="MainContainer">
+        <img src="pictures/calc.jpg" width="20px" />
+        <p>Calculator</p>
+        <button id="close" class="menuButtons">X</button>
+        <button id="maximize" class="menuButtons"><div id="maximizePic"></div></button>
+        <button id="minimize" class="menuButtons">-</button>
+         <div id="SecondContainer">
+            <nav id="navigation">
+                <ul>
+                    <li>View</li>
+                    <li>Edit</li>
+                    <li>Help</li>
+                </ul>
+            </nav>
+            <div id="calc-body">
+                <div id="inputField">
+                    8854455
+                </div>
+                <div id="binaryNumbers">
+                    <table id="numberTable" cellpadding="0px" cellspacing="0px">
+                        <tbody>
+                            <tr>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>0000</td>
+                            </tr>
+                            <tr>
+                                <td class="numbersInBinary">&nbsp;63</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="numbersInBinary">&nbsp;47</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right-numbersInBinary">32&nbsp;</td>
+                            </tr>
+                                <tr>
+                                <td>0000</td>
+                                <td>0000</td>
+                                <td>1000</td>
+                                <td>0111</td>
+                                <td>0001</td>
+                                <td>1011</td>
+                                <td>1011</td>
+                                <td>0111</td>
+                            </tr>
+                                <tr>
+                                <td class="numbersInBinary">&nbsp;31</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td class="numbersInBinary">&nbsp;15</td>
+                                <td></td>
+                                <td></td>
+                                <td class="right-numbersInBinary">0&nbsp;</td>
+                            </tr>
+                        </tbody>
+                            
+                    </table>
+                    <aside>
+                        <div class="radioButons">
+                            <ul>
+                                <li>
+                                    <input id="hex" type="radio" name="numtype" />
+                                    <label for="hex">Hex</label>
+                                </li>
+                                <li>
+                                    <input id="dec" type="radio" name="numtype" />
+                                    <label for="dec">Dec</label>
+                                </li>
+                                <li>
+                                    <input id="oct" type="radio" name="numtype" />
+                                    <label for="oct">Oct</label>
+                                </li>
+                                <li>
+                                    <input id="Bin" type="radio" name="numtype" />
+                                    <label for="Bin">Bin</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="radioButons">
+                            <ul>
+                                <li>
+                                    <input id="qword" type="radio" name="word" />
+                                    <label for="qword">Qword</label>
+                                </li>
+                                <li>
+                                    <input id="dword" type="radio" name="word" />
+                                    <label for="dword">Dword</label>
+                                </li>
+                                <li>
+                                    <input id="word" type="radio" name="word" />
+                                    <label for="word">Word</label>
+                                </li>
+                                <li>
+                                    <input id="byte" type="radio" name="word" />
+                                    <label for="byte">Byte</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                    <section id="buttons">
+                        <table id="buttonTable" cellpadding="1">
+                            <tbody>
+                                    <tr>
+                                    <td><button class="nonactive" disabled="disabled"></button></td>
+                                    <td><button class="functionButtons">Mod</button></td>
+                                    <td><button class="nonactive" disabled="disabled">A</button></td>
+                                    <td><button class="innerButtons">MC</button></td>
+                                    <td><button class="innerButtons">MR</button></td>
+                                    <td><button class="innerButtons">MS</button></td>
+                                    <td><button class="innerButtons">M+</button></td>
+                                    <td><button class="innerButtons">M-</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="functionButtons">(</button></td>
+                                    <td><button class="functionButtons">)</button></td>
+                                    <td><button class="nonactive" disabled="disabled">B</button></td>
+                                    <td><button id="arrow" class="functionButtons">←</button></td>
+                                    <td><button class="functionButtons">CE</button></td>
+                                    <td><button class="functionButtons">C</button></td>
+                                    <td><button class="functionButtons">±</button></td>
+                                    <td><button class="nonactive smaller" disabled="disabled">√</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="functionButtons">RoL</button></td>
+                                    <td><button class="functionButtons">RoR</button></td>
+                                    <td><button class="nonactive" disabled="disabled">C</button></td>
+                                    <td><button class="numbers">7</button></td>
+                                    <td><button class="numbers">8</button></td>
+                                    <td><button class="numbers">9</button></td>
+                                    <td><button class="functionButtons">/</button></td>
+                                    <td><button class="nonactive smaller" disabled="disabled">%</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="functionButtons">Or</button></td>
+                                    <td><button class="functionButtons">Xor</button></td>
+                                    <td><button class="nonactive" disabled="disabled">D</button></td>
+                                    <td><button class="numbers">4</button></td>
+                                    <td><button class="numbers">5</button></td>
+                                    <td><button class="numbers">6</button></td>
+                                    <td><button class="functionButtons">*</button></td>
+                                    <td><button class="nonactive smaller" disabled="disabled">1/x</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="functionButtons">Lsh</button></td>
+                                    <td><button class="functionButtons">Rsh</button></td>
+                                    <td><button class="nonactive" disabled="disabled">E</button></td>
+                                    <td><button class="numbers">1</button></td>
+                                    <td><button class="numbers">2</button></td>
+                                    <td><button class="numbers">3</button></td>
+                                    <td><button class="functionButtons">-</button></td>
+                                    <td rowspan="2"><button id="equal" class="functionButtons">=</button></td>
+                                </tr>
+                                <tr>
+                                    <td><button class="functionButtons">Not</button></td>
+                                    <td><button class="functionButtons">And</button></td>
+                                    <td><button class="nonactive" disabled="disabled">F</button></td>
+                                    <td colspan="2"><button id="zero" class="numbers" >0</button></td>
+                                    <td><button class="nonactive" disabled="disabled">.</button></td>
+                                    <td><button class="functionButtons">+</button></td>
+                                </tr>
+                            </tbody>                             
+                        </table>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div style="float:right">Best preview FireFOx, IE, Opera;</div> 
+</body>
+</html>
+
+
+
+

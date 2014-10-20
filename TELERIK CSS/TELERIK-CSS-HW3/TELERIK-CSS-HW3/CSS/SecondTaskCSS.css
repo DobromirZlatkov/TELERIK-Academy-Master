@@ -1,0 +1,57 @@
+﻿body {
+    font-size:small;
+}
+section, h1, area, p, img, strong, header,div {
+    margin:0px;
+    padding:0px;
+}
+section {
+    background-color:lightgray;
+    border:1px solid black;
+    border-radius:5px;
+    padding-left:15px;
+    padding-top:10px;
+    padding-right:15px;
+    padding-bottom:10px;
+    width: 350px;
+}
+h1 {
+    font-weight:400;
+    font-size:medium;
+    font-family:Calibri;
+    color:rgb(50,50,50);
+}
+article {
+    border:1px solid black;
+    margin-top:40px;
+    margin-bottom:10px;
+    padding:0.7em;
+    background-color:white;
+    overflow:hidden;
+}
+img {
+    float:left;
+    margin-right:15px;
+    border:1px solid gray;
+}
+p {
+    text-align:justify;
+    width:92%;
+}
+div {
+    float:right;
+}
+button.listen, .add {
+    background:url(../pictures/buttons.png);
+    font-size:x-small;
+    color:white;
+    width: 59px;
+    height: 21px;
+    border-color: #800;
+}
+.add {
+    width:46px;
+}
+button:hover {
+    cursor: pointer;
+}

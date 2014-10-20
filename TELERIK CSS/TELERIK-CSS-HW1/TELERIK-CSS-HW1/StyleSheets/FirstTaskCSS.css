@@ -1,0 +1,58 @@
+﻿body {
+}
+table {
+    background-color:gray;
+    font-family:Calibri;
+    border-collapse: separate;
+    border-spacing: 10px;
+}
+td
+{
+   padding:5px 5px;
+   font-family:Times new roman;
+    height:20px;
+	vertical-align:top;
+}
+
+th{
+	color:lightgray;
+	font-size: 18px;
+	font-family:Times new roman;
+	
+}
+span {
+	font-style: italic;
+	color:white;
+	text-decoration: none;
+}   
+.poker{
+	width: 15px
+}
+.poker3{
+	color:red
+}
+#poker{
+	color:yellow;
+}
+#papaz{
+	width:300px;
+	
+}
+#poker2{
+	color:lightgrey;
+}
+.orange{
+    color:orange;
+}
+#A1 {
+    text-decoration:none;
+    color:antiquewhite;
+}
+#Td1 {
+    color:lightgray;
+    height:60px;
+}
+#Div1 {
+    margin-top:20px;
+    color:antiquewhite;
+}

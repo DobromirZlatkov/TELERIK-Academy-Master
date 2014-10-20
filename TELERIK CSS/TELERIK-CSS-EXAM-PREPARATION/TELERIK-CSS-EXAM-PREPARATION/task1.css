@@ -1,0 +1,62 @@
+﻿body ,header ,div ,ul ,li ,a {
+    margin:0px;
+    padding:0px;
+}
+div {
+    height: 72px;
+    width:960px;
+    background: -webkit-linear-gradient(rgb(0,45,68), rgb(119,209,255)); /* For Safari 5.1 to 6.0 */
+    padding:50px;
+}
+ul {
+    position:relative;
+}
+ul li{
+    display:inline-block;
+    
+    padding:5px;
+    font-family:Arial;
+    font-size:26px;
+    margin-right:5px;
+}
+    ul li ul {
+        display:none;
+        position:absolute;
+        left:0;
+    }
+    ul li.selected {
+        background-color:rgba(15,41,55,0.5);
+        border-radius:10px;
+    }
+    ul li.selected > ul {
+        display:block;
+    }
+    ul li ul li:hover {
+       background-color:rgba(12,62,86,0.8);
+       border-radius:10px;
+    }
+     ul li ul li:hover > ul {
+        display:block;
+        left:auto;
+        border-radius:10px;
+        background: -webkit-linear-gradient(white,rgb(119,209,255)); /* For Safari 5.1 to 6.0 */
+    }
+    ul li ul li ul {
+        margin-left:-6px;
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+    ul li ul li ul li {
+        display:block;
+        border-bottom:1px solid black;
+    }
+        ul li ul li ul li:last-of-type {
+            border:0;
+        }
+a {
+    color:black;
+    text-decoration:none;
+    padding:5px;
+}

@@ -1,0 +1,65 @@
+div, ul, li ,a {
+    margin:0px;
+    padding:0px;
+}
+div {
+    width:960px;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left:20px;
+    font-family:Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+}
+a {
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    font-weight:bold;
+}
+ul {
+   list-style-type:none;
+     background: -webkit-linear-gradient(rgb(210,155,255),rgb(137,119,255));
+     width:155px;
+     font-size:1.4em;
+     padding-left:15px;
+     padding-right:15px;
+     padding-top:5px;
+     padding-bottom:5px;
+     border-radius:10px;
+}
+    ul li {
+        padding-top:5px;
+        padding-bottom:5px;
+        padding-left:15px;
+        padding-right:15px;
+        border-bottom:1px solid rgb(157, 0, 255);
+        align-content:space-around;
+    }
+        ul li:last-of-type {
+            border:none;
+        }
+    ul li ul {
+        background-image: url(imgs/arrow.png);
+        background-repeat: no-repeat;
+        background-position: 5px 15px;
+        width:auto;
+        display:none;
+        margin-top: -10px;
+        margin-left: 25px;    
+        padding-right:0px;
+        padding-right:5px;
+        background-color:rgb(181,170,255);
+        font-size:0.8em;
+        padding-left:7px;
+    }
+        ul li ul li{
+            align-content:center;
+            margin-left:10px;
+        }
+        ul li:hover {
+            border:1px solid rgb(157, 0, 255);
+            border-radius:5px;
+        }
+    ul li:hover > ul {
+        display:inline-block;
+        position:absolute;
+    }

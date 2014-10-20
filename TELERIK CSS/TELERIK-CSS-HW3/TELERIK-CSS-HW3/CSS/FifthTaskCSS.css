@@ -1,0 +1,81 @@
+﻿body, div, nav, li, aside, form,ul,p {
+    margin:0px;
+    padding:0px;
+    font-family:Calibri;
+}
+section {
+    width: 29em;
+    height: 24em;
+    border:2px ridge black;
+    border-style:groove;
+}
+hr {
+    width:90%;
+    color:black;
+    background-color:black;
+    height: 1px;
+}
+nav {
+    align-items:center;
+}
+ul{
+    list-style:none;
+    margin-left: 64px;
+    margin-top: 11px;
+}
+li {
+    display:inline;
+    margin-right:5px;   
+}
+a {
+     color:#33CCFF;
+     font-family:Arial;
+     font-weight:500;
+}
+div {
+    width: 67%;
+    height: 83%;
+    border:1px solid black;
+    display:inline-block;
+}
+fieldset {
+    width: 125px;
+    font-size:0.7em;
+    line-height:2em;
+    height: 28%;
+    display:inline-block;
+}
+img {
+    display:inline-block;
+    margin-right:5px;
+}
+p {
+    display:inline-block; 
+    padding-top: 12px;
+    float:right;
+}
+span {
+    float:left;
+}
+legend {
+    margin-left: 15px;
+}
+aside {
+    display:inline-block;
+    width: 143px;
+}
+aside fieldset{
+    border:none;
+    margin-left: 0;
+}
+    aside fieldset legend {
+        margin-left: 0;
+        font-size:1.2em;
+        font-weight:700;
+    }
+legend span {
+    margin-right:11px;
+}
+input {
+    width:100px;
+}

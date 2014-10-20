@@ -1,0 +1,86 @@
+html, body, div, article, header, h1, nav, ul {
+    margin:0px;
+    padding:0px;
+}
+ul {
+    list-style-type:none;
+}
+html, body {
+	font-family: Tahoma, sans-serif;
+    font-size: 14px
+}
+
+#wrapper {
+	width: 960px;
+	margin: 0 auto;
+    padding:5px;
+    position:absolute;
+}
+
+.clear {
+	clear: both;
+}
+a {
+    text-decoration:none;
+    color:rgb(51,51,51);
+}
+ul li {
+    display:inline-block;
+}
+#archive {
+    text-align:right;
+}
+    #archive ul {
+        margin-right:5px;
+    }
+#archive ul li{
+    font-size:10px;
+    margin-left:10px;
+}
+
+#header {
+    background-image:url('images/topnav_divider.png');
+    background-repeat:repeat-x;
+    color:white;
+    padding:24px;
+    padding-left:30px;
+    padding-right: 15px;
+}
+#nav {
+    display:inline-block;
+      
+}
+    #nav ul {
+        margin-top: -5px;
+    }
+    #nav ul li {
+        margin-left:20px;
+    }
+    #nav ul li a{
+        color:white;
+        font-size:18px;
+    }
+    #nav ul li:first-letter{
+        text-transform:capitalize;
+    }
+#header h1 {
+    float:right;
+    display:inline-block;
+    font-size:28px;
+    padding-bottom:10px;
+    margin-top: -9px;
+}
+#content {
+}
+    #content h1 {
+        color:rgb(51,51,51);
+        font-size: 24px;
+        margin-top: 14px;
+    }
+article {
+    color:rgb(51,51,51);
+    text-align:justify;
+}
+p {
+    letter-spacing:0.008em;
+}

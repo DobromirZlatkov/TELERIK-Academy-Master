@@ -1,0 +1,162 @@
+﻿body, header, section, article, div, h1, ul, h2,h3, p, button {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background-color:rgb(200,200,200);
+    font-family:Calibri;
+}
+img,#navHeader {
+    display:inline-block;
+    font-size:0.9em;
+}
+#navHeader {
+    background-color: rgb(200,200,200);
+    color: black;
+    padding:0px;
+}
+nav {
+    display:inline-block;
+}
+ul {
+    list-style-type:none;
+    display:inline-block;
+    margin-top:10px;
+}
+    ul li {
+        
+    }
+        ul li:first-child {
+
+        }
+            ul li ul li {
+                font-size:0.7em;
+                padding-bottom:0px;
+            }
+                ul li ul li:first-child {
+                    color:#8f0000;
+                    font-weight:800;
+                }
+section {
+    display:inline-block;
+    background-color:white;
+    border:1px solid black;
+    width: 76%;
+    position: relative;
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:10px;
+    margin-right: 5px;
+    padding-bottom:15px;
+}
+section button{
+    background-color:white;
+    font-size:11px;
+    padding:2px;
+    width: 119px;
+    border:1px solid black;
+}
+hr {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+h1 {
+    font-size:1.4em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2 {
+    background-color:gray;
+    color:white;
+    font-size:0.7em;
+    padding-left:3px;
+}
+article {
+    text-align:left;
+    padding-bottom:10px;
+}
+p {
+    padding-top:10px;
+    font-size: 13px;
+}
+p img {
+    float:left;
+    margin-bottom: 30px;
+}
+article:first-of-type p {
+    height:100px;
+    font-weight:800;
+    line-height:1em;
+}
+article:first-of-type p::first-line {
+    line-height:2em;
+}
+a {
+    color:#8f0000;
+    font-size:14px;
+}
+aside {
+    display:inline-block;
+    float:right;
+    width:9em;
+    position:fixed;
+    font-size:15px;
+}
+    aside p {
+        border:1px solid gray;
+        background-color:white;
+        margin-bottom:2px;   
+        align-content:center;
+        padding:0;
+        padding-bottom:4px;
+        text-align:center;
+        
+    }
+    aside p a {
+        font-size: 12px;
+        
+    }
+.sidebarhead {
+    text-align:center;
+}
+input {
+    display: inline-block;
+    width: 60%;
+    height:11px;
+    margin-top:5px;
+}
+#Styles {
+    background:url(../pictures/25-styles.png);
+    width: 7em;
+    height: 2.4em;
+}
+.arrow-w , .arrow-e{
+      border-style: dashed;
+      border-color: transparent;
+      border-width: 0.53em;
+      display: -moz-inline-box;
+      display: inline-block;
+      /* Use font-size to control the size of the arrow. */
+      font-size: 9px;
+      height: 0;
+      line-height: 0;
+      position: relative;
+      vertical-align: middle;
+      width: 0;
+}
+
+.arrow-w {
+    border-left-width: 1em;
+      border-left-style: solid;
+      border-left-color: black;
+      left: 0.25em;
+      float:right;
+}
+.arrow-e {
+      
+      border-right-width: 1em;
+      border-right-style: solid;
+      border-right-color: black;
+    right: 0.25em;
+    float:left;
+}

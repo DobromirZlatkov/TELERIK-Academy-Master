@@ -1,0 +1,61 @@
+body, div, ul, li, a, img {
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type:none;
+}
+#wrapper {
+    font-family:Constantina, Georgia, 'Nimbus Roman No9 L', serif;
+    font-size:16px;
+    width:960px;
+    padding:5px;
+}
+a {
+    text-decoration:none;
+    color:black;
+}
+.menu li {
+    position:relative;
+    background-color:rgb(182,255,0);
+    margin-bottom:10px;
+    padding:10px;
+    border-radius:15px;
+    width:150px;
+    text-align:center;
+}
+.menu li .content {
+    display:none;
+    position:absolute;
+    margin-left: 160px;
+    margin-top: -28px;
+}
+.menu li:hover > .content {
+    display:block;
+}
+    .menu li:hover > a {
+        text-decoration:underline;
+    }
+
+.sub-menu li img{
+    display:none;
+}
+.sub-menu li a:hover ~ img {
+    display:block;
+}
+.sub-menu li {
+    width:500px;
+    text-align:left;
+    border-radius:10px;
+    background-color:rgb(0,128,0);
+    padding:20px;
+}
+    .sub-menu li a {
+        color:white;
+
+    }
+img {
+    margin-top:10px;
+    border-radius:10px;
+    width:100%
+}

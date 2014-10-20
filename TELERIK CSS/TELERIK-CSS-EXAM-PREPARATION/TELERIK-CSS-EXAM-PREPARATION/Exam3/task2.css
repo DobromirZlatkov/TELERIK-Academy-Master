@@ -1,0 +1,63 @@
+﻿body ,div ,ul ,li ,a {
+    margin:0px;
+    padding:0px;
+}
+.select-list {
+
+}
+ul {
+    list-style-type:none;
+    
+    background: -webkit-linear-gradient(rgb(129,104,255),rgb(255,255,255));
+    height:205px;
+    overflow-y:scroll;
+    width:150px;
+    display:inline-block;
+    border-top-left-radius:5px;
+}
+#wrapper {
+    width:960px;
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+    padding:25px;
+}
+ul li {
+    border-bottom:1px solid black;
+    padding:5px;
+    padding-left:15px;
+}
+    ul li:first-letter {
+        text-decoration:underline;
+    }
+    ul li:last-of-type {
+        border:0;
+    }
+img {
+    margin-bottom: 80px;
+}
+.selected {
+    background:rgb(108,78,255);
+}
+/* Turn on a 13x13 scrollbar */
+::-webkit-scrollbar {
+     width: 15px; height: 15px;
+
+}
+	::-webkit-scrollbar-button {  background-color: #666; }
+
+ul::-webkit-scrollbar-track:vertical {
+    background-color: rgb(240,240,240);
+    border-left: 2px solid white;
+}
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+    background-color: rgb(240,240,240);
+    border-left: 2px solid white;  
+    height: 15px;
+}
+::-webkit-scrollbar-thumb
+{
+background-color: rgb(205,205,205);
+border-left:2px solid white;
+}
