@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Cables", "Cables\02.Cables.csproj", "{075E7E7F-6B20-429E-A32F-8DE2EB720622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Salaries", "Salaries\01.Salaries.csproj", "{CA5DF38F-0618-4905-ADCB-FA00C49B0799}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.PeshoFriends", "PeshoFriends\03.PeshoFriends.csproj", "{B155FFEA-679D-4E83-9BCC-A00E390445F9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{075E7E7F-6B20-429E-A32F-8DE2EB720622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{075E7E7F-6B20-429E-A32F-8DE2EB720622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{075E7E7F-6B20-429E-A32F-8DE2EB720622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{075E7E7F-6B20-429E-A32F-8DE2EB720622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5DF38F-0618-4905-ADCB-FA00C49B0799}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5DF38F-0618-4905-ADCB-FA00C49B0799}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5DF38F-0618-4905-ADCB-FA00C49B0799}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5DF38F-0618-4905-ADCB-FA00C49B0799}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B155FFEA-679D-4E83-9BCC-A00E390445F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B155FFEA-679D-4E83-9BCC-A00E390445F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B155FFEA-679D-4E83-9BCC-A00E390445F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B155FFEA-679D-4E83-9BCC-A00E390445F9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
